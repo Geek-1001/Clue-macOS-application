@@ -7,9 +7,11 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "CLUVideo.h"
 
 @interface CLUDocument : NSDocument
 
+@property (nonatomic, readonly) CLUVideo *video;
 
 @end
 

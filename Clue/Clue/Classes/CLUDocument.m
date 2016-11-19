@@ -66,7 +66,7 @@
         
         NSURL *moduleFileURL = [moduleURL URLByAppendingPathComponent:[moduleFile filename]];
         if ([[moduleFile filename] isEqualToString:@"module_video.mp4"]) {
-            // TODO: handle video file
+            _video = [[CLUVideo alloc] initWithURL:moduleFileURL];
         }
     }
     return YES;
