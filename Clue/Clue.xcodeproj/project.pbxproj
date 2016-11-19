@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E20B87451DCE248A00D25D21 /* CLUVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E20B87441DCE248A00D25D21 /* CLUVideoViewController.m */; };
 		E20C2CB91DCE1EE600033248 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E20C2CB81DCE1EE600033248 /* AppDelegate.m */; };
 		E20C2CBC1DCE1EE600033248 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E20C2CBB1DCE1EE600033248 /* main.m */; };
 		E20C2CBF1DCE1EE600033248 /* Document.m in Sources */ = {isa = PBXBuildFile; fileRef = E20C2CBE1DCE1EE600033248 /* Document.m */; };
@@ -17,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E20B87431DCE248A00D25D21 /* CLUVideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLUVideoViewController.h; sourceTree = "<group>"; };
+		E20B87441DCE248A00D25D21 /* CLUVideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLUVideoViewController.m; sourceTree = "<group>"; };
 		E20C2CB41DCE1EE600033248 /* Clue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Clue.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E20C2CB71DCE1EE600033248 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E20C2CB81DCE1EE600033248 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -41,6 +44,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E20B87421DCE246200D25D21 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				E20B87431DCE248A00D25D21 /* CLUVideoViewController.h */,
+				E20B87441DCE248A00D25D21 /* CLUVideoViewController.m */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
 		E20C2CAB1DCE1EE600033248 = {
 			isa = PBXGroup;
 			children = (
@@ -90,6 +102,7 @@
 		E2791DD01DCE20670010A549 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				E20B87421DCE246200D25D21 /* ViewControllers */,
 				E20C2CB71DCE1EE600033248 /* AppDelegate.h */,
 				E20C2CB81DCE1EE600033248 /* AppDelegate.m */,
 				E20C2CBD1DCE1EE600033248 /* Document.h */,
@@ -171,6 +184,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E20C2CBF1DCE1EE600033248 /* Document.m in Sources */,
+				E20B87451DCE248A00D25D21 /* CLUVideoViewController.m in Sources */,
 				E20C2CBC1DCE1EE600033248 /* main.m in Sources */,
 				E20C2CB91DCE1EE600033248 /* AppDelegate.m in Sources */,
 			);
