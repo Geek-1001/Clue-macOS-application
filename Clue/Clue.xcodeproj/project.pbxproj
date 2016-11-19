@@ -15,6 +15,7 @@
 		E20C2CC41DCE1EE600033248 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E20C2CC31DCE1EE600033248 /* Assets.xcassets */; };
 		E20C2CC71DCE1EE600033248 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = E20C2CC51DCE1EE600033248 /* MainMenu.xib */; };
 		E2791DD21DCE20FE0010A549 /* clue_document.icns in Resources */ = {isa = PBXBuildFile; fileRef = E2791DD11DCE20FE0010A549 /* clue_document.icns */; };
+		E28E17C51DE106F5000CA903 /* CLUVideo.m in Sources */ = {isa = PBXBuildFile; fileRef = E28E17C41DE106F5000CA903 /* CLUVideo.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,8 @@
 		E20C2CC61DCE1EE600033248 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		E20C2CC81DCE1EE600033248 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E2791DD11DCE20FE0010A549 /* clue_document.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = clue_document.icns; sourceTree = "<group>"; };
+		E28E17C31DE106F5000CA903 /* CLUVideo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLUVideo.h; sourceTree = "<group>"; };
+		E28E17C41DE106F5000CA903 /* CLUVideo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLUVideo.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +105,7 @@
 		E2791DD01DCE20670010A549 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				E28E17C21DE106BD000CA903 /* Models */,
 				E20B87421DCE246200D25D21 /* ViewControllers */,
 				E20C2CB71DCE1EE600033248 /* AppDelegate.h */,
 				E20C2CB81DCE1EE600033248 /* AppDelegate.m */,
@@ -109,6 +113,15 @@
 				E20C2CBE1DCE1EE600033248 /* CLUDocument.m */,
 			);
 			path = Classes;
+			sourceTree = "<group>";
+		};
+		E28E17C21DE106BD000CA903 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E28E17C31DE106F5000CA903 /* CLUVideo.h */,
+				E28E17C41DE106F5000CA903 /* CLUVideo.m */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -185,6 +198,7 @@
 			files = (
 				E20C2CBF1DCE1EE600033248 /* CLUDocument.m in Sources */,
 				E20B87451DCE248A00D25D21 /* CLUVideoViewController.m in Sources */,
+				E28E17C51DE106F5000CA903 /* CLUVideo.m in Sources */,
 				E20C2CBC1DCE1EE600033248 /* main.m in Sources */,
 				E20C2CB91DCE1EE600033248 /* AppDelegate.m in Sources */,
 			);
