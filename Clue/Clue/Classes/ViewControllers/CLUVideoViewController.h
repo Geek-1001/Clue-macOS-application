@@ -8,7 +8,8 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "CLURootViewController.h"
 
-@interface CLUVideoViewController : NSViewController
+@interface CLUVideoViewController : CLURootViewController
 
 @end
