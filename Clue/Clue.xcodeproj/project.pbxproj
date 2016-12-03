@@ -16,6 +16,7 @@
 		E20C2CC71DCE1EE600033248 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = E20C2CC51DCE1EE600033248 /* MainMenu.xib */; };
 		E2791DD21DCE20FE0010A549 /* clue_document.icns in Resources */ = {isa = PBXBuildFile; fileRef = E2791DD11DCE20FE0010A549 /* clue_document.icns */; };
 		E28E17C51DE106F5000CA903 /* CLUVideo.m in Sources */ = {isa = PBXBuildFile; fileRef = E28E17C41DE106F5000CA903 /* CLUVideo.m */; };
+		E2CB3B371DEB88F400417F26 /* CLUVideoControlsView.m in Sources */ = {isa = PBXBuildFile; fileRef = E2CB3B361DEB88F400417F26 /* CLUVideoControlsView.m */; };
 		E2CB3B3A1DEB8A2000417F26 /* CLUTimeSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = E2CB3B391DEB8A2000417F26 /* CLUTimeSlider.m */; };
 		E2CB3B3E1DEB8A8300417F26 /* CLUTimeSliderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E2CB3B3D1DEB8A8300417F26 /* CLUTimeSliderCell.m */; };
 		E2CB3B411DEB8E2C00417F26 /* CLUTextLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = E2CB3B401DEB8E2C00417F26 /* CLUTextLabel.m */; };
@@ -37,6 +38,8 @@
 		E2791DD11DCE20FE0010A549 /* clue_document.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = clue_document.icns; sourceTree = "<group>"; };
 		E28E17C31DE106F5000CA903 /* CLUVideo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLUVideo.h; sourceTree = "<group>"; };
 		E28E17C41DE106F5000CA903 /* CLUVideo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLUVideo.m; sourceTree = "<group>"; };
+		E2CB3B351DEB88F400417F26 /* CLUVideoControlsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLUVideoControlsView.h; sourceTree = "<group>"; };
+		E2CB3B361DEB88F400417F26 /* CLUVideoControlsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLUVideoControlsView.m; sourceTree = "<group>"; };
 		E2CB3B381DEB8A2000417F26 /* CLUTimeSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLUTimeSlider.h; sourceTree = "<group>"; };
 		E2CB3B391DEB8A2000417F26 /* CLUTimeSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLUTimeSlider.m; sourceTree = "<group>"; };
 		E2CB3B3C1DEB8A8300417F26 /* CLUTimeSliderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLUTimeSliderCell.h; sourceTree = "<group>"; };
@@ -138,6 +141,8 @@
 			isa = PBXGroup;
 			children = (
 				E2CB3B3B1DEB8A6400417F26 /* Cells */,
+				E2CB3B351DEB88F400417F26 /* CLUVideoControlsView.h */,
+				E2CB3B361DEB88F400417F26 /* CLUVideoControlsView.m */,
 				E2CB3B381DEB8A2000417F26 /* CLUTimeSlider.h */,
 				E2CB3B391DEB8A2000417F26 /* CLUTimeSlider.m */,
 				E2CB3B3F1DEB8E2C00417F26 /* CLUTextLabel.h */,
@@ -235,6 +240,7 @@
 				E2CB3B3E1DEB8A8300417F26 /* CLUTimeSliderCell.m in Sources */,
 				E20C2CBC1DCE1EE600033248 /* main.m in Sources */,
 				E20C2CB91DCE1EE600033248 /* AppDelegate.m in Sources */,
+				E2CB3B371DEB88F400417F26 /* CLUVideoControlsView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
