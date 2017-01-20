@@ -18,6 +18,7 @@
 		E28E17C51DE106F5000CA903 /* CLUVideo.m in Sources */ = {isa = PBXBuildFile; fileRef = E28E17C41DE106F5000CA903 /* CLUVideo.m */; };
 		E2BF90E21E32B1EA00B8F18D /* KPCTabsControl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2BF90E11E32B1EA00B8F18D /* KPCTabsControl.framework */; };
 		E2BF90E31E32B1F500B8F18D /* KPCTabsControl.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = E2BF90E11E32B1EA00B8F18D /* KPCTabsControl.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E2BF90E61E32B36000B8F18D /* CLUTabBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = E2BF90E51E32B36000B8F18D /* CLUTabBarItem.m */; };
 		E2CB3B371DEB88F400417F26 /* CLUVideoControlsView.m in Sources */ = {isa = PBXBuildFile; fileRef = E2CB3B361DEB88F400417F26 /* CLUVideoControlsView.m */; };
 		E2CB3B3A1DEB8A2000417F26 /* CLUTimeSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = E2CB3B391DEB8A2000417F26 /* CLUTimeSlider.m */; };
 		E2CB3B3E1DEB8A8300417F26 /* CLUTimeSliderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E2CB3B3D1DEB8A8300417F26 /* CLUTimeSliderCell.m */; };
@@ -55,6 +56,8 @@
 		E28E17C31DE106F5000CA903 /* CLUVideo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLUVideo.h; sourceTree = "<group>"; };
 		E28E17C41DE106F5000CA903 /* CLUVideo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLUVideo.m; sourceTree = "<group>"; };
 		E2BF90E11E32B1EA00B8F18D /* KPCTabsControl.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = KPCTabsControl.framework; sourceTree = "<group>"; };
+		E2BF90E41E32B36000B8F18D /* CLUTabBarItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLUTabBarItem.h; sourceTree = "<group>"; };
+		E2BF90E51E32B36000B8F18D /* CLUTabBarItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLUTabBarItem.m; sourceTree = "<group>"; };
 		E2CB3B351DEB88F400417F26 /* CLUVideoControlsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLUVideoControlsView.h; sourceTree = "<group>"; };
 		E2CB3B361DEB88F400417F26 /* CLUVideoControlsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLUVideoControlsView.m; sourceTree = "<group>"; };
 		E2CB3B381DEB8A2000417F26 /* CLUTimeSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLUTimeSlider.h; sourceTree = "<group>"; };
@@ -156,6 +159,8 @@
 			children = (
 				E28E17C31DE106F5000CA903 /* CLUVideo.h */,
 				E28E17C41DE106F5000CA903 /* CLUVideo.m */,
+				E2BF90E41E32B36000B8F18D /* CLUTabBarItem.h */,
+				E2BF90E51E32B36000B8F18D /* CLUTabBarItem.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
