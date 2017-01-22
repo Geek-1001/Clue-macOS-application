@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11542"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11762"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -51,6 +51,16 @@
                             </customView>
                         </subviews>
                     </customView>
+                    <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qm2-XQ-frX">
+                        <rect key="frame" x="375" y="137" width="525" height="530"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <subviews>
+                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7IX-3s-uhh" customClass="TabsControl" customModule="KPCTabsControl">
+                                <rect key="frame" x="0.0" y="490" width="525" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            </customView>
+                        </subviews>
+                    </customView>
                 </subviews>
             </view>
             <connections>
@@ -65,6 +75,12 @@
                 <outlet property="playerView" destination="ig2-yZ-XD6" id="CXG-Lw-5ka"/>
                 <outlet property="videoControls" destination="6HD-gi-f4S" id="YLF-4R-Qwu"/>
                 <outlet property="view" destination="vql-md-rUP" id="uJa-re-rcl"/>
+            </connections>
+        </viewController>
+        <viewController id="itE-Ki-l5e" customClass="CLUDetailsViewController">
+            <connections>
+                <outlet property="tabsControl" destination="7IX-3s-uhh" id="iIq-OA-Yem"/>
+                <outlet property="view" destination="qm2-XQ-frX" id="Eg3-wv-x4D"/>
             </connections>
         </viewController>
     </objects>
