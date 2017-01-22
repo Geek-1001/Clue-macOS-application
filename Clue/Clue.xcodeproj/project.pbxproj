@@ -54,6 +54,7 @@
 		E20C2CC61DCE1EE600033248 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		E20C2CC81DCE1EE600033248 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E2791DD11DCE20FE0010A549 /* clue_document.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = clue_document.icns; sourceTree = "<group>"; };
+		E27A50031E34DD5500382FF9 /* CLUJSONDeserializable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLUJSONDeserializable.h; sourceTree = "<group>"; };
 		E28E17C31DE106F5000CA903 /* CLUVideo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLUVideo.h; sourceTree = "<group>"; };
 		E28E17C41DE106F5000CA903 /* CLUVideo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLUVideo.m; sourceTree = "<group>"; };
 		E29154521E32261900619F5D /* CLUDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLUDetailsViewController.h; sourceTree = "<group>"; };
@@ -148,6 +149,7 @@
 		E2791DD01DCE20670010A549 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				E27A50021E34DD0300382FF9 /* Utils */,
 				E28E17C21DE106BD000CA903 /* Models */,
 				E2CB3B311DEB6D1900417F26 /* Views */,
 				E20B87421DCE246200D25D21 /* ViewControllers */,
@@ -157,6 +159,14 @@
 				E20C2CBE1DCE1EE600033248 /* CLUDocument.m */,
 			);
 			path = Classes;
+			sourceTree = "<group>";
+		};
+		E27A50021E34DD0300382FF9 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				E27A50031E34DD5500382FF9 /* CLUJSONDeserializable.h */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		E28E17C21DE106BD000CA903 /* Models */ = {
