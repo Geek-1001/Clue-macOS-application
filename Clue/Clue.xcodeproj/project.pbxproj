@@ -15,6 +15,7 @@
 		E20C2CC41DCE1EE600033248 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E20C2CC31DCE1EE600033248 /* Assets.xcassets */; };
 		E20C2CC71DCE1EE600033248 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = E20C2CC51DCE1EE600033248 /* MainMenu.xib */; };
 		E2791DD21DCE20FE0010A549 /* clue_document.icns in Resources */ = {isa = PBXBuildFile; fileRef = E2791DD11DCE20FE0010A549 /* clue_document.icns */; };
+		E27A4FE41E34DBF600382FF9 /* CLUDeviceInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = E27A4FE31E34DBF600382FF9 /* CLUDeviceInfo.m */; };
 		E28E17C51DE106F5000CA903 /* CLUVideo.m in Sources */ = {isa = PBXBuildFile; fileRef = E28E17C41DE106F5000CA903 /* CLUVideo.m */; };
 		E29154541E32261900619F5D /* CLUDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E29154531E32261900619F5D /* CLUDetailsViewController.m */; };
 		E2BF90E21E32B1EA00B8F18D /* KPCTabsControl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2BF90E11E32B1EA00B8F18D /* KPCTabsControl.framework */; };
@@ -54,6 +55,8 @@
 		E20C2CC61DCE1EE600033248 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		E20C2CC81DCE1EE600033248 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E2791DD11DCE20FE0010A549 /* clue_document.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = clue_document.icns; sourceTree = "<group>"; };
+		E27A4FE21E34DBF600382FF9 /* CLUDeviceInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLUDeviceInfo.h; sourceTree = "<group>"; };
+		E27A4FE31E34DBF600382FF9 /* CLUDeviceInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLUDeviceInfo.m; sourceTree = "<group>"; };
 		E27A50031E34DD5500382FF9 /* CLUJSONDeserializable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLUJSONDeserializable.h; sourceTree = "<group>"; };
 		E28E17C31DE106F5000CA903 /* CLUVideo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLUVideo.h; sourceTree = "<group>"; };
 		E28E17C41DE106F5000CA903 /* CLUVideo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLUVideo.m; sourceTree = "<group>"; };
@@ -176,6 +179,8 @@
 				E28E17C41DE106F5000CA903 /* CLUVideo.m */,
 				E2BF90E41E32B36000B8F18D /* CLUTabBarItem.h */,
 				E2BF90E51E32B36000B8F18D /* CLUTabBarItem.m */,
+				E27A4FE21E34DBF600382FF9 /* CLUDeviceInfo.h */,
+				E27A4FE31E34DBF600382FF9 /* CLUDeviceInfo.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -284,6 +289,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E27A4FE41E34DBF600382FF9 /* CLUDeviceInfo.m in Sources */,
 				E2CB3B411DEB8E2C00417F26 /* CLUTextLabel.m in Sources */,
 				E20C2CBF1DCE1EE600033248 /* CLUDocument.m in Sources */,
 				E29154541E32261900619F5D /* CLUDetailsViewController.m in Sources */,
