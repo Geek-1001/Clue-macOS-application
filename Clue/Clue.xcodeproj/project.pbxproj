@@ -27,6 +27,7 @@
 		E2CB3B3E1DEB8A8300417F26 /* CLUTimeSliderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E2CB3B3D1DEB8A8300417F26 /* CLUTimeSliderCell.m */; };
 		E2CB3B411DEB8E2C00417F26 /* CLUTextLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = E2CB3B401DEB8E2C00417F26 /* CLUTextLabel.m */; };
 		E2FA6DC01DF336A300EBDBBA /* CLURootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2FA6DBF1DF336A300EBDBBA /* CLURootViewController.m */; };
+		E2FAFF0A1E34D37700C43677 /* CLUDeviceInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2FAFF091E34D37700C43677 /* CLUDeviceInfoViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -78,6 +79,8 @@
 		E2CB3B401DEB8E2C00417F26 /* CLUTextLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLUTextLabel.m; sourceTree = "<group>"; };
 		E2FA6DBE1DF336A300EBDBBA /* CLURootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLURootViewController.h; sourceTree = "<group>"; };
 		E2FA6DBF1DF336A300EBDBBA /* CLURootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLURootViewController.m; sourceTree = "<group>"; };
+		E2FAFF081E34D37600C43677 /* CLUDeviceInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLUDeviceInfoViewController.h; sourceTree = "<group>"; };
+		E2FAFF091E34D37700C43677 /* CLUDeviceInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLUDeviceInfoViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +104,8 @@
 				E2FA6DBF1DF336A300EBDBBA /* CLURootViewController.m */,
 				E29154521E32261900619F5D /* CLUDetailsViewController.h */,
 				E29154531E32261900619F5D /* CLUDetailsViewController.m */,
+				E2FAFF081E34D37600C43677 /* CLUDeviceInfoViewController.h */,
+				E2FAFF091E34D37700C43677 /* CLUDeviceInfoViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -301,6 +306,7 @@
 				E29154541E32261900619F5D /* CLUDetailsViewController.m in Sources */,
 				E20B87451DCE248A00D25D21 /* CLUVideoViewController.m in Sources */,
 				E28E17C51DE106F5000CA903 /* CLUVideo.m in Sources */,
+				E2FAFF0A1E34D37700C43677 /* CLUDeviceInfoViewController.m in Sources */,
 				E2BF90E61E32B36000B8F18D /* CLUTabBarItem.m in Sources */,
 				E2CB3B3A1DEB8A2000417F26 /* CLUTimeSlider.m in Sources */,
 				E2FA6DC01DF336A300EBDBBA /* CLURootViewController.m in Sources */,
