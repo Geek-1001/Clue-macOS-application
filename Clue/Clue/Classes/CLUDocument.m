@@ -57,16 +57,25 @@
     NSDictionary <NSString *, NSFileWrapper *> *infoFileWrappers = [infoFileWrapper fileWrappers];
     NSDictionary <NSString *, NSFileWrapper *> *modulesFileWrappers = [modulesFileWrapper fileWrappers];
     
-    // TODO: parse other modules files
-    for (NSString *key in modulesFileWrappers) {
-        NSFileWrapper *moduleFile = [modulesFileWrappers objectForKey:key];
-        if (![moduleFile isRegularFile]) {
+    // TODO: Refactor. Come up with something more clever for this parsing
+    BOOL infoParseResult = [self parseFileWrappersDictionary:infoFileWrappers withURL:infoURL];
+    BOOL moduleParseResult = [self parseFileWrappersDictionary:modulesFileWrappers withURL:moduleURL];
+    
+    return infoParseResult && moduleParseResult;
+}
+
+- (BOOL)parseFileWrappersDictionary:(NSDictionary <NSString *, NSFileWrapper *> *)fileWrappers withURL:(NSURL *)url {
+    for (NSString *key in fileWrappers) {
+        NSFileWrapper *file = [fileWrappers objectForKey:key];
+        if (![file isRegularFile]) {
             return NO;
         }
         
-        NSURL *moduleFileURL = [moduleURL URLByAppendingPathComponent:[moduleFile filename]];
-        if ([[moduleFile filename] isEqualToString:@"module_video.mp4"]) {
-            _video = [[CLUVideo alloc] initWithURL:moduleFileURL];
+        NSURL *fileURL = [url URLByAppendingPathComponent:[file filename]];
+        if ([[file filename] isEqualToString:@"module_video.mp4"]) {
+            _video = [[CLUVideo alloc] initWithURL:fileURL];
+        } else if ([[file filename] isEqualToString:@"info_device.json"]) {
+            _deviceInfo = [[CLUDeviceInfo alloc] initWithURL:fileURL];
         }
     }
     return YES;
