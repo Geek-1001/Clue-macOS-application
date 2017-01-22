@@ -10,8 +10,18 @@
 
 @interface CLUTabBarItem : NSObject
 
+typedef NS_ENUM(NSInteger, CLUTabBarItemType) {
+    CLUTabBarItemUnknown,
+    CLUTabBarItemNetwork,
+    CLUTabBarItemUserInetraction,
+    CLUTabBarItemViewStructure,
+    CLUTabBarItemDeviceInfo
+};
+
 - (instancetype)initWithTitle:(NSString *)title;
+- (instancetype)initWithTitle:(NSString *)title forType:(CLUTabBarItemType)type;
 
 @property (nonatomic) NSString *title;
+@property (nonatomic) CLUTabBarItemType type;
 
 @end

@@ -11,11 +11,17 @@
 @implementation CLUTabBarItem
 
 - (instancetype)initWithTitle:(NSString *)title {
+    self = [self initWithTitle:title forType:CLUTabBarItemUnknown];
+    return self;
+}
+
+- (instancetype)initWithTitle:(NSString *)title forType:(CLUTabBarItemType)type {
     self = [super init];
     if (!self) {
         return nil;
     }
     _title = title;
+    _type = type;
     return self;
 }
 
