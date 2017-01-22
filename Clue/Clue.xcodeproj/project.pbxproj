@@ -16,6 +16,7 @@
 		E20C2CC71DCE1EE600033248 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = E20C2CC51DCE1EE600033248 /* MainMenu.xib */; };
 		E2791DD21DCE20FE0010A549 /* clue_document.icns in Resources */ = {isa = PBXBuildFile; fileRef = E2791DD11DCE20FE0010A549 /* clue_document.icns */; };
 		E28E17C51DE106F5000CA903 /* CLUVideo.m in Sources */ = {isa = PBXBuildFile; fileRef = E28E17C41DE106F5000CA903 /* CLUVideo.m */; };
+		E29154541E32261900619F5D /* CLUDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E29154531E32261900619F5D /* CLUDetailsViewController.m */; };
 		E2BF90E21E32B1EA00B8F18D /* KPCTabsControl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2BF90E11E32B1EA00B8F18D /* KPCTabsControl.framework */; };
 		E2BF90E31E32B1F500B8F18D /* KPCTabsControl.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = E2BF90E11E32B1EA00B8F18D /* KPCTabsControl.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E2BF90E61E32B36000B8F18D /* CLUTabBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = E2BF90E51E32B36000B8F18D /* CLUTabBarItem.m */; };
@@ -55,6 +56,8 @@
 		E2791DD11DCE20FE0010A549 /* clue_document.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = clue_document.icns; sourceTree = "<group>"; };
 		E28E17C31DE106F5000CA903 /* CLUVideo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLUVideo.h; sourceTree = "<group>"; };
 		E28E17C41DE106F5000CA903 /* CLUVideo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLUVideo.m; sourceTree = "<group>"; };
+		E29154521E32261900619F5D /* CLUDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLUDetailsViewController.h; sourceTree = "<group>"; };
+		E29154531E32261900619F5D /* CLUDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLUDetailsViewController.m; sourceTree = "<group>"; };
 		E2BF90E11E32B1EA00B8F18D /* KPCTabsControl.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = KPCTabsControl.framework; sourceTree = "<group>"; };
 		E2BF90E41E32B36000B8F18D /* CLUTabBarItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLUTabBarItem.h; sourceTree = "<group>"; };
 		E2BF90E51E32B36000B8F18D /* CLUTabBarItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLUTabBarItem.m; sourceTree = "<group>"; };
@@ -89,6 +92,8 @@
 				E20B87441DCE248A00D25D21 /* CLUVideoViewController.m */,
 				E2FA6DBE1DF336A300EBDBBA /* CLURootViewController.h */,
 				E2FA6DBF1DF336A300EBDBBA /* CLURootViewController.m */,
+				E29154521E32261900619F5D /* CLUDetailsViewController.h */,
+				E29154531E32261900619F5D /* CLUDetailsViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -271,8 +276,10 @@
 			files = (
 				E2CB3B411DEB8E2C00417F26 /* CLUTextLabel.m in Sources */,
 				E20C2CBF1DCE1EE600033248 /* CLUDocument.m in Sources */,
+				E29154541E32261900619F5D /* CLUDetailsViewController.m in Sources */,
 				E20B87451DCE248A00D25D21 /* CLUVideoViewController.m in Sources */,
 				E28E17C51DE106F5000CA903 /* CLUVideo.m in Sources */,
+				E2BF90E61E32B36000B8F18D /* CLUTabBarItem.m in Sources */,
 				E2CB3B3A1DEB8A2000417F26 /* CLUTimeSlider.m in Sources */,
 				E2FA6DC01DF336A300EBDBBA /* CLURootViewController.m in Sources */,
 				E2CB3B3E1DEB8A8300417F26 /* CLUTimeSliderCell.m in Sources */,
