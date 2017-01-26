@@ -7,10 +7,10 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "CLUTableRowView.h"
 
-@interface CLUDeviceInfoTableRowView : NSTableRowView
+@interface CLUDeviceInfoTableRowView : CLUTableRowView
 
 - (void)setAlternateRow:(BOOL)isAlternate;
-- (void)setText:(NSString *)text;
 
 @end
