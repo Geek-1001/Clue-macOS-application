@@ -14,6 +14,7 @@
 		E20C2CC21DCE1EE600033248 /* Document.xib in Resources */ = {isa = PBXBuildFile; fileRef = E20C2CC01DCE1EE600033248 /* Document.xib */; };
 		E20C2CC41DCE1EE600033248 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E20C2CC31DCE1EE600033248 /* Assets.xcassets */; };
 		E20C2CC71DCE1EE600033248 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = E20C2CC51DCE1EE600033248 /* MainMenu.xib */; };
+		E215C57C1E3782BA003E1091 /* CLUTimeRelatedModule.m in Sources */ = {isa = PBXBuildFile; fileRef = E215C57B1E3782BA003E1091 /* CLUTimeRelatedModule.m */; };
 		E26E5B6A1E395D3D00AB49B1 /* CLUTableRowView.m in Sources */ = {isa = PBXBuildFile; fileRef = E26E5B691E395D3D00AB49B1 /* CLUTableRowView.m */; };
 		E2791DD21DCE20FE0010A549 /* clue_document.icns in Resources */ = {isa = PBXBuildFile; fileRef = E2791DD11DCE20FE0010A549 /* clue_document.icns */; };
 		E27A4FE41E34DBF600382FF9 /* CLUDeviceInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = E27A4FE31E34DBF600382FF9 /* CLUDeviceInfo.m */; };
@@ -57,6 +58,8 @@
 		E20C2CC31DCE1EE600033248 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E20C2CC61DCE1EE600033248 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		E20C2CC81DCE1EE600033248 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E215C57A1E3782BA003E1091 /* CLUTimeRelatedModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLUTimeRelatedModule.h; sourceTree = "<group>"; };
+		E215C57B1E3782BA003E1091 /* CLUTimeRelatedModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLUTimeRelatedModule.m; sourceTree = "<group>"; };
 		E26E5B681E395D3D00AB49B1 /* CLUTableRowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLUTableRowView.h; sourceTree = "<group>"; };
 		E26E5B691E395D3D00AB49B1 /* CLUTableRowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLUTableRowView.m; sourceTree = "<group>"; };
 		E2791DD11DCE20FE0010A549 /* clue_document.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = clue_document.icns; sourceTree = "<group>"; };
@@ -192,6 +195,8 @@
 				E2BF90E51E32B36000B8F18D /* CLUTabBarItem.m */,
 				E27A4FE21E34DBF600382FF9 /* CLUDeviceInfo.h */,
 				E27A4FE31E34DBF600382FF9 /* CLUDeviceInfo.m */,
+				E215C57A1E3782BA003E1091 /* CLUTimeRelatedModule.h */,
+				E215C57B1E3782BA003E1091 /* CLUTimeRelatedModule.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -306,6 +311,7 @@
 			files = (
 				E27A4FE41E34DBF600382FF9 /* CLUDeviceInfo.m in Sources */,
 				E27A50091E354C3700382FF9 /* CLUDeviceInfoTableRowView.m in Sources */,
+				E215C57C1E3782BA003E1091 /* CLUTimeRelatedModule.m in Sources */,
 				E2CB3B411DEB8E2C00417F26 /* CLUTextLabel.m in Sources */,
 				E20C2CBF1DCE1EE600033248 /* CLUDocument.m in Sources */,
 				E29154541E32261900619F5D /* CLUDetailsViewController.m in Sources */,
