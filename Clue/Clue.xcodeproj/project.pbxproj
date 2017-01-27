@@ -15,6 +15,7 @@
 		E20C2CC71DCE1EE600033248 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = E20C2CC51DCE1EE600033248 /* MainMenu.xib */; };
 		E211B5F81E3B47E900512126 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E211B5F71E3B47E900512126 /* Assets.xcassets */; };
 		E215C57C1E3782BA003E1091 /* CLUTimeRelatedModule.m in Sources */ = {isa = PBXBuildFile; fileRef = E215C57B1E3782BA003E1091 /* CLUTimeRelatedModule.m */; };
+		E257CB971E38B5300059E1B9 /* NSMutableArray+CLUMutableArrayAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = E257CB961E38B5300059E1B9 /* NSMutableArray+CLUMutableArrayAdditions.m */; };
 		E26E5B6A1E395D3D00AB49B1 /* CLUTableRowView.m in Sources */ = {isa = PBXBuildFile; fileRef = E26E5B691E395D3D00AB49B1 /* CLUTableRowView.m */; };
 		E2791DD21DCE20FE0010A549 /* clue_document.icns in Resources */ = {isa = PBXBuildFile; fileRef = E2791DD11DCE20FE0010A549 /* clue_document.icns */; };
 		E27A4FE41E34DBF600382FF9 /* CLUDeviceInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = E27A4FE31E34DBF600382FF9 /* CLUDeviceInfo.m */; };
@@ -61,6 +62,8 @@
 		E215C5791E378213003E1091 /* CLUOutlineViewDataItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLUOutlineViewDataItem.h; sourceTree = "<group>"; };
 		E215C57A1E3782BA003E1091 /* CLUTimeRelatedModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLUTimeRelatedModule.h; sourceTree = "<group>"; };
 		E215C57B1E3782BA003E1091 /* CLUTimeRelatedModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLUTimeRelatedModule.m; sourceTree = "<group>"; };
+		E257CB951E38B5300059E1B9 /* NSMutableArray+CLUMutableArrayAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+CLUMutableArrayAdditions.h"; sourceTree = "<group>"; };
+		E257CB961E38B5300059E1B9 /* NSMutableArray+CLUMutableArrayAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+CLUMutableArrayAdditions.m"; sourceTree = "<group>"; };
 		E26E5B681E395D3D00AB49B1 /* CLUTableRowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLUTableRowView.h; sourceTree = "<group>"; };
 		E26E5B691E395D3D00AB49B1 /* CLUTableRowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLUTableRowView.m; sourceTree = "<group>"; };
 		E2791DD11DCE20FE0010A549 /* clue_document.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = clue_document.icns; sourceTree = "<group>"; };
@@ -184,6 +187,8 @@
 			children = (
 				E27A50031E34DD5500382FF9 /* CLUJSONDeserializable.h */,
 				E215C5791E378213003E1091 /* CLUOutlineViewDataItem.h */,
+				E257CB951E38B5300059E1B9 /* NSMutableArray+CLUMutableArrayAdditions.h */,
+				E257CB961E38B5300059E1B9 /* NSMutableArray+CLUMutableArrayAdditions.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -317,6 +322,7 @@
 				E2CB3B411DEB8E2C00417F26 /* CLUTextLabel.m in Sources */,
 				E20C2CBF1DCE1EE600033248 /* CLUDocument.m in Sources */,
 				E29154541E32261900619F5D /* CLUDetailsViewController.m in Sources */,
+				E257CB971E38B5300059E1B9 /* NSMutableArray+CLUMutableArrayAdditions.m in Sources */,
 				E20B87451DCE248A00D25D21 /* CLUVideoViewController.m in Sources */,
 				E28E17C51DE106F5000CA903 /* CLUVideo.m in Sources */,
 				E2FAFF0A1E34D37700C43677 /* CLUDeviceInfoViewController.m in Sources */,
