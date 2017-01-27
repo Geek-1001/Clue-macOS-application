@@ -12,8 +12,8 @@
 		E20C2CBC1DCE1EE600033248 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E20C2CBB1DCE1EE600033248 /* main.m */; };
 		E20C2CBF1DCE1EE600033248 /* CLUDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = E20C2CBE1DCE1EE600033248 /* CLUDocument.m */; };
 		E20C2CC21DCE1EE600033248 /* Document.xib in Resources */ = {isa = PBXBuildFile; fileRef = E20C2CC01DCE1EE600033248 /* Document.xib */; };
-		E20C2CC41DCE1EE600033248 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E20C2CC31DCE1EE600033248 /* Assets.xcassets */; };
 		E20C2CC71DCE1EE600033248 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = E20C2CC51DCE1EE600033248 /* MainMenu.xib */; };
+		E211B5F81E3B47E900512126 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E211B5F71E3B47E900512126 /* Assets.xcassets */; };
 		E215C57C1E3782BA003E1091 /* CLUTimeRelatedModule.m in Sources */ = {isa = PBXBuildFile; fileRef = E215C57B1E3782BA003E1091 /* CLUTimeRelatedModule.m */; };
 		E26E5B6A1E395D3D00AB49B1 /* CLUTableRowView.m in Sources */ = {isa = PBXBuildFile; fileRef = E26E5B691E395D3D00AB49B1 /* CLUTableRowView.m */; };
 		E2791DD21DCE20FE0010A549 /* clue_document.icns in Resources */ = {isa = PBXBuildFile; fileRef = E2791DD11DCE20FE0010A549 /* clue_document.icns */; };
@@ -55,9 +55,9 @@
 		E20C2CBD1DCE1EE600033248 /* CLUDocument.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLUDocument.h; sourceTree = "<group>"; };
 		E20C2CBE1DCE1EE600033248 /* CLUDocument.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLUDocument.m; sourceTree = "<group>"; };
 		E20C2CC11DCE1EE600033248 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/Document.xib; sourceTree = "<group>"; };
-		E20C2CC31DCE1EE600033248 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E20C2CC61DCE1EE600033248 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		E20C2CC81DCE1EE600033248 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E211B5F71E3B47E900512126 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E215C57A1E3782BA003E1091 /* CLUTimeRelatedModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLUTimeRelatedModule.h; sourceTree = "<group>"; };
 		E215C57B1E3782BA003E1091 /* CLUTimeRelatedModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLUTimeRelatedModule.m; sourceTree = "<group>"; };
 		E26E5B681E395D3D00AB49B1 /* CLUTableRowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLUTableRowView.h; sourceTree = "<group>"; };
@@ -157,8 +157,8 @@
 			children = (
 				E2791DD11DCE20FE0010A549 /* clue_document.icns */,
 				E20C2CC01DCE1EE600033248 /* Document.xib */,
-				E20C2CC31DCE1EE600033248 /* Assets.xcassets */,
 				E20C2CC51DCE1EE600033248 /* MainMenu.xib */,
+				E211B5F71E3B47E900512126 /* Assets.xcassets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -296,8 +296,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E2791DD21DCE20FE0010A549 /* clue_document.icns in Resources */,
-				E20C2CC41DCE1EE600033248 /* Assets.xcassets in Resources */,
 				E20C2CC21DCE1EE600033248 /* Document.xib in Resources */,
+				E211B5F81E3B47E900512126 /* Assets.xcassets in Resources */,
 				E20C2CC71DCE1EE600033248 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
