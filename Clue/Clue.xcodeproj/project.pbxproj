@@ -58,6 +58,7 @@
 		E20C2CC61DCE1EE600033248 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		E20C2CC81DCE1EE600033248 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E211B5F71E3B47E900512126 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E215C5791E378213003E1091 /* CLUOutlineViewDataItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLUOutlineViewDataItem.h; sourceTree = "<group>"; };
 		E215C57A1E3782BA003E1091 /* CLUTimeRelatedModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLUTimeRelatedModule.h; sourceTree = "<group>"; };
 		E215C57B1E3782BA003E1091 /* CLUTimeRelatedModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLUTimeRelatedModule.m; sourceTree = "<group>"; };
 		E26E5B681E395D3D00AB49B1 /* CLUTableRowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLUTableRowView.h; sourceTree = "<group>"; };
@@ -182,6 +183,7 @@
 			isa = PBXGroup;
 			children = (
 				E27A50031E34DD5500382FF9 /* CLUJSONDeserializable.h */,
+				E215C5791E378213003E1091 /* CLUOutlineViewDataItem.h */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
