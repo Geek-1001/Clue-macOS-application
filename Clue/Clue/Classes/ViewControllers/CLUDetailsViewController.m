@@ -10,12 +10,14 @@
 #import "KPCTabsControl/KPCTabsControl-Swift.h"
 #import "CLUTabBarItem.h"
 #import "CLUDeviceInfoViewController.h"
+#import "CLUViewStructureViewController.h"
 
 @interface CLUDetailsViewController () <TabsControlDataSource, TabsControlDelegate>
 
 @property (weak) IBOutlet TabsControl *tabsControl;
 @property (nonatomic) NSArray *tabControlItems;
 @property (weak) IBOutlet CLUDeviceInfoViewController *deviceInfoViewController;
+@property (weak) IBOutlet CLUViewStructureViewController *viewStructureViewController;
 
 @end
 
@@ -80,18 +82,8 @@
 #pragma mark - Tabs Control Delegate
 
 - (void)tabsControlDidChangeSelection:(TabsControl *)control item:(CLUTabBarItem *)item {
-    // Hide everything
-    [_deviceInfoViewController.view setHidden:YES];
-    
-    // Show only selected
-    switch (item.type) {
-        case CLUTabBarItemDeviceInfo:
-            [_deviceInfoViewController.view setHidden:NO];
-            break;
-            
-        default:
-            break;
-    }
+    [_deviceInfoViewController.view setHidden:(item.type != CLUTabBarItemDeviceInfo)];
+    [_viewStructureViewController.view setHidden:(item.type != CLUTabBarItemViewStructure)];
 }
 
 @end
