@@ -9,11 +9,13 @@
 #import <Cocoa/Cocoa.h>
 #import "CLUVideo.h"
 #import "CLUDeviceInfo.h"
+#import "CLUViewStructure.h"
 
 @interface CLUDocument : NSDocument
 
 @property (nonatomic, readonly) CLUVideo *video;
 @property (nonatomic, readonly) CLUDeviceInfo *deviceInfo;
+@property (nonatomic, readonly) CLUViewStructure *viewStructure;
 
 @end
 

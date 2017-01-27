@@ -76,6 +76,8 @@
             _video = [[CLUVideo alloc] initWithURL:fileURL];
         } else if ([[file filename] isEqualToString:@"info_device.json"]) {
             _deviceInfo = [[CLUDeviceInfo alloc] initWithURL:fileURL];
+        } else if ([[file filename] isEqualToString:@"module_view.json"]) {
+            _viewStructure = [[CLUViewStructure alloc] initWithURL:fileURL];
         }
     }
     return YES;
