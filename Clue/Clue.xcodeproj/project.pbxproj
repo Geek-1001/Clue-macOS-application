@@ -15,6 +15,7 @@
 		E20C2CC71DCE1EE600033248 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = E20C2CC51DCE1EE600033248 /* MainMenu.xib */; };
 		E211B5F81E3B47E900512126 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E211B5F71E3B47E900512126 /* Assets.xcassets */; };
 		E211B5FB1E3B4BF900512126 /* NSString+NSStringAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = E211B5FA1E3B4BF900512126 /* NSString+NSStringAddition.m */; };
+		E215C5781E37720E003E1091 /* CLUViewStructureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E215C5771E37720E003E1091 /* CLUViewStructureViewController.m */; };
 		E215C57C1E3782BA003E1091 /* CLUTimeRelatedModule.m in Sources */ = {isa = PBXBuildFile; fileRef = E215C57B1E3782BA003E1091 /* CLUTimeRelatedModule.m */; };
 		E215C57F1E3789E0003E1091 /* CLUViewStructure.m in Sources */ = {isa = PBXBuildFile; fileRef = E215C57E1E3789E0003E1091 /* CLUViewStructure.m */; };
 		E257CB941E38B1C80059E1B9 /* CLUUIView.m in Sources */ = {isa = PBXBuildFile; fileRef = E257CB931E38B1C80059E1B9 /* CLUUIView.m */; };
@@ -65,6 +66,8 @@
 		E211B5F71E3B47E900512126 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E211B5F91E3B4BF900512126 /* NSString+NSStringAddition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+NSStringAddition.h"; sourceTree = "<group>"; };
 		E211B5FA1E3B4BF900512126 /* NSString+NSStringAddition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+NSStringAddition.m"; sourceTree = "<group>"; };
+		E215C5761E37720E003E1091 /* CLUViewStructureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLUViewStructureViewController.h; sourceTree = "<group>"; };
+		E215C5771E37720E003E1091 /* CLUViewStructureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLUViewStructureViewController.m; sourceTree = "<group>"; };
 		E215C5791E378213003E1091 /* CLUOutlineViewDataItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLUOutlineViewDataItem.h; sourceTree = "<group>"; };
 		E215C57A1E3782BA003E1091 /* CLUTimeRelatedModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLUTimeRelatedModule.h; sourceTree = "<group>"; };
 		E215C57B1E3782BA003E1091 /* CLUTimeRelatedModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLUTimeRelatedModule.m; sourceTree = "<group>"; };
@@ -128,6 +131,8 @@
 				E29154531E32261900619F5D /* CLUDetailsViewController.m */,
 				E2FAFF081E34D37600C43677 /* CLUDeviceInfoViewController.h */,
 				E2FAFF091E34D37700C43677 /* CLUDeviceInfoViewController.m */,
+				E215C5761E37720E003E1091 /* CLUViewStructureViewController.h */,
+				E215C5771E37720E003E1091 /* CLUViewStructureViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -343,6 +348,7 @@
 				E2CB3B411DEB8E2C00417F26 /* CLUTextLabel.m in Sources */,
 				E20C2CBF1DCE1EE600033248 /* CLUDocument.m in Sources */,
 				E215C57F1E3789E0003E1091 /* CLUViewStructure.m in Sources */,
+				E215C5781E37720E003E1091 /* CLUViewStructureViewController.m in Sources */,
 				E29154541E32261900619F5D /* CLUDetailsViewController.m in Sources */,
 				E257CB971E38B5300059E1B9 /* NSMutableArray+CLUMutableArrayAdditions.m in Sources */,
 				E20B87451DCE248A00D25D21 /* CLUVideoViewController.m in Sources */,
