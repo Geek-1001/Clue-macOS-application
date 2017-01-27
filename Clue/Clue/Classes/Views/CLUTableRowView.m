@@ -9,7 +9,7 @@
 #import "CLUTableRowView.h"
 #import "CLUTextLabel.h"
 
-#define kDefaultSideOffset 20
+#define kDefaultSideOffset 32
 
 @interface CLUTableRowView()
 
@@ -47,7 +47,8 @@
 
 - (void)setupImageView {
     if (!_imageView) {
-        _imageView = [[NSImageView alloc] initWithFrame:NSMakeRect(0, 0, 10, self.frame.size.height)];
+        _imageView = [[NSImageView alloc] initWithFrame:
+                      NSMakeRect(10, self.frame.size.height/2 - 17/2, 17, 17)]; // center vertical
         [self addSubview:_imageView];
     }
 }
