@@ -12,10 +12,13 @@
 #import "CLUOutlineViewDataItem.h"
 #import "NSMutableArray+CLUMutableArrayAdditions.h"
 #import "CLUTableRowView.h"
+#import "CLUTimeDistributionDelegate.h"
+#import "CLUTimeRelatedModuleDelegate.h"
+#import "CLUTimeDistributionController.h"
 
 #define kDefaultOutlineViewRowHeight 20
 
-@interface CLUViewStructureViewController () <NSOutlineViewDataSource, NSOutlineViewDelegate>
+@interface CLUViewStructureViewController () <NSOutlineViewDataSource, NSOutlineViewDelegate, CLUTimeDistributionDelegate, CLUTimeRelatedModuleDelegate>
 
 @property (weak) IBOutlet NSScrollView *scrollView;
 @property (weak) IBOutlet NSOutlineView *outlineView;
@@ -24,6 +27,15 @@
 @end
 
 @implementation CLUViewStructureViewController
+
+- (instancetype)initWithCoder:(NSCoder *)coder {
+    self = [super initWithCoder:coder];
+    if (!self) {
+        return nil;
+    }
+    [[CLUTimeDistributionController sharedController] registerHandler:self];
+    return self;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -37,6 +49,7 @@
         return;
     }
     _viewStructure = document.viewStructure;
+    _viewStructure.delegate = self;
     [self configureTableView];
 }
 
@@ -147,6 +160,25 @@
     [tableViewRow setImage:[self imageForItemType:itemType]];
     
     return tableViewRow;
+}
+
+#pragma mark - Time Distribution Delegate
+
+- (void)timeDidChangeTo:(double)time {
+    NSInteger timeInSeconds = ceil(time);
+    [_viewStructure updateCurrentTimestamp:timeInSeconds];
+}
+
+#pragma mark - Time Related Module Delegate
+
+- (void)timeRelatedModule:(CLUViewStructure *)module didChangeWithTimestamp:(NSInteger)timestamp {
+    [_outlineView reloadData];
+}
+
+#pragma mark - Dealloc
+
+- (void)dealloc {
+    [[CLUTimeDistributionController sharedController] unregisterHandler:self];
 }
 
 @end
