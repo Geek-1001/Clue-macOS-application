@@ -73,6 +73,7 @@
 		E215C57B1E3782BA003E1091 /* CLUTimeRelatedModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLUTimeRelatedModule.m; sourceTree = "<group>"; };
 		E215C57D1E3789E0003E1091 /* CLUViewStructure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLUViewStructure.h; sourceTree = "<group>"; };
 		E215C57E1E3789E0003E1091 /* CLUViewStructure.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLUViewStructure.m; sourceTree = "<group>"; };
+		E23B12891E3E253600EE6CDF /* CLUTimeDistributionDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLUTimeDistributionDelegate.h; sourceTree = "<group>"; };
 		E257CB921E38B1C80059E1B9 /* CLUUIView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLUUIView.h; sourceTree = "<group>"; };
 		E257CB931E38B1C80059E1B9 /* CLUUIView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLUUIView.m; sourceTree = "<group>"; };
 		E257CB951E38B5300059E1B9 /* NSMutableArray+CLUMutableArrayAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+CLUMutableArrayAdditions.h"; sourceTree = "<group>"; };
@@ -208,6 +209,7 @@
 				E257CB961E38B5300059E1B9 /* NSMutableArray+CLUMutableArrayAdditions.m */,
 				E211B5F91E3B4BF900512126 /* NSString+NSStringAddition.h */,
 				E211B5FA1E3B4BF900512126 /* NSString+NSStringAddition.m */,
+				E23B12891E3E253600EE6CDF /* CLUTimeDistributionDelegate.h */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
