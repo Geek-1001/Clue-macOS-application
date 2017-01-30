@@ -19,6 +19,7 @@
     if (!self) {
         return nil;
     }
+    _currentTiestamp = 0;
     _rootDataDictionary = [NSMutableDictionary new];
     _rootDataItems = [self processJsonFileWithURL:url];
     return self;
@@ -57,6 +58,15 @@
         return nil;
     }
     return jsonDictionary;
+}
+
+- (void)updateCurrentTimestamp:(NSInteger)timestamp {
+    _currentTiestamp = timestamp;
+    NSNumber *timestampKey = [NSNumber numberWithInteger:timestamp];
+    if ([_rootDataDictionary objectForKey:timestampKey] && _delegate) {
+//        CLUTimeRelatedModule *moduleCopy = [self copy]; // TODO: implement (id)copyWithZone:(NSZone *)zone
+        [_delegate timeRelatedModule:self didChangeWithTimestamp:timestamp];
+    }
 }
 
 @end
