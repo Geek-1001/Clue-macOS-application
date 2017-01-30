@@ -18,6 +18,7 @@
 		E215C5781E37720E003E1091 /* CLUViewStructureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E215C5771E37720E003E1091 /* CLUViewStructureViewController.m */; };
 		E215C57C1E3782BA003E1091 /* CLUTimeRelatedModule.m in Sources */ = {isa = PBXBuildFile; fileRef = E215C57B1E3782BA003E1091 /* CLUTimeRelatedModule.m */; };
 		E215C57F1E3789E0003E1091 /* CLUViewStructure.m in Sources */ = {isa = PBXBuildFile; fileRef = E215C57E1E3789E0003E1091 /* CLUViewStructure.m */; };
+		E23B128D1E3E27AA00EE6CDF /* CLUTimeDistributionController.m in Sources */ = {isa = PBXBuildFile; fileRef = E23B128C1E3E27AA00EE6CDF /* CLUTimeDistributionController.m */; };
 		E257CB941E38B1C80059E1B9 /* CLUUIView.m in Sources */ = {isa = PBXBuildFile; fileRef = E257CB931E38B1C80059E1B9 /* CLUUIView.m */; };
 		E257CB971E38B5300059E1B9 /* NSMutableArray+CLUMutableArrayAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = E257CB961E38B5300059E1B9 /* NSMutableArray+CLUMutableArrayAdditions.m */; };
 		E257CB9D1E38BE000059E1B9 /* CLUUIViewProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = E257CB9C1E38BE000059E1B9 /* CLUUIViewProperty.m */; };
@@ -74,6 +75,8 @@
 		E215C57D1E3789E0003E1091 /* CLUViewStructure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLUViewStructure.h; sourceTree = "<group>"; };
 		E215C57E1E3789E0003E1091 /* CLUViewStructure.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLUViewStructure.m; sourceTree = "<group>"; };
 		E23B12891E3E253600EE6CDF /* CLUTimeDistributionDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLUTimeDistributionDelegate.h; sourceTree = "<group>"; };
+		E23B128B1E3E27AA00EE6CDF /* CLUTimeDistributionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLUTimeDistributionController.h; sourceTree = "<group>"; };
+		E23B128C1E3E27AA00EE6CDF /* CLUTimeDistributionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLUTimeDistributionController.m; sourceTree = "<group>"; };
 		E257CB921E38B1C80059E1B9 /* CLUUIView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLUUIView.h; sourceTree = "<group>"; };
 		E257CB931E38B1C80059E1B9 /* CLUUIView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLUUIView.m; sourceTree = "<group>"; };
 		E257CB951E38B5300059E1B9 /* NSMutableArray+CLUMutableArrayAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+CLUMutableArrayAdditions.h"; sourceTree = "<group>"; };
@@ -185,12 +188,22 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		E23B128A1E3E273800EE6CDF /* AuxiliaryControllers */ = {
+			isa = PBXGroup;
+			children = (
+				E23B128B1E3E27AA00EE6CDF /* CLUTimeDistributionController.h */,
+				E23B128C1E3E27AA00EE6CDF /* CLUTimeDistributionController.m */,
+			);
+			path = AuxiliaryControllers;
+			sourceTree = "<group>";
+		};
 		E2791DD01DCE20670010A549 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
 				E27A50021E34DD0300382FF9 /* Utils */,
 				E28E17C21DE106BD000CA903 /* Models */,
 				E2CB3B311DEB6D1900417F26 /* Views */,
+				E23B128A1E3E273800EE6CDF /* AuxiliaryControllers */,
 				E20B87421DCE246200D25D21 /* ViewControllers */,
 				E20C2CB71DCE1EE600033248 /* AppDelegate.h */,
 				E20C2CB81DCE1EE600033248 /* AppDelegate.m */,
@@ -352,6 +365,7 @@
 				E215C57F1E3789E0003E1091 /* CLUViewStructure.m in Sources */,
 				E215C5781E37720E003E1091 /* CLUViewStructureViewController.m in Sources */,
 				E29154541E32261900619F5D /* CLUDetailsViewController.m in Sources */,
+				E23B128D1E3E27AA00EE6CDF /* CLUTimeDistributionController.m in Sources */,
 				E257CB971E38B5300059E1B9 /* NSMutableArray+CLUMutableArrayAdditions.m in Sources */,
 				E20B87451DCE248A00D25D21 /* CLUVideoViewController.m in Sources */,
 				E28E17C51DE106F5000CA903 /* CLUVideo.m in Sources */,
