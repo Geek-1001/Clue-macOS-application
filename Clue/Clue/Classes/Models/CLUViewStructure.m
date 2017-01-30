@@ -27,9 +27,10 @@
         return;
     }
     for (NSDictionary *viewStateDictionary in dataItems) {
-        CGFloat timestamp = [[viewStateDictionary objectForKey:TIMESTAMP_KEY] floatValue];
+        NSInteger timestamp = [[viewStateDictionary objectForKey:TIMESTAMP_KEY] integerValue];
         CLUUIView *view = [[CLUUIView alloc] initWithJSONRepresentation:[viewStateDictionary objectForKey:VIEW_KEY]];
-        [dataDictionary setObject:view forKey:[NSNumber numberWithFloat:timestamp]];
+        NSNumber *timestampKey = [NSNumber numberWithFloat:timestamp];
+        [dataDictionary setObject:view forKey:timestampKey];
     }
 }
 
