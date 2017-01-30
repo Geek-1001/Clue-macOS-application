@@ -11,6 +11,7 @@
 #import "CLUVideo.h"
 #import "CLUVideoControlsView.h"
 #import "CLUTimeSlider.h"
+#import "CLUTimeDistributionController.h"
 
 static void *AVSPPlayerItemStatusContext = &AVSPPlayerItemStatusContext;
 static void *AVSPPlayerRateContext = &AVSPPlayerRateContext;
@@ -103,19 +104,19 @@ static void *AVSPPlayerLayerReadyForDisplay = &AVSPPlayerLayerReadyForDisplay;
         if (_videoControls.currentTime == [self videoDuration]) {
             [self setCurrentTime:0.f];
         }
-        [_player play];
+        [self play];
     } else {
-        [_player pause];
+        [self pause];
     }
 }
 
 - (void)timeSliderDidDrag:(CLUTimeSlider *)timeSlider {
     [self setCurrentTime:timeSlider.doubleValue];
     if (timeSlider.isSliderMoving) {
-        [_player pause];
+        [self pause];
     } else {
         if (_videoControls.isPlayButtonPlay) {
-            [_player play];
+            [self play];
         }
     }
 }
@@ -167,7 +168,9 @@ static void *AVSPPlayerLayerReadyForDisplay = &AVSPPlayerLayerReadyForDisplay;
     [_player replaceCurrentItemWithPlayerItem:playerItem];
     __weak CLUVideoViewController *weakSelf = self;
     [self setTimeObserverToken:[_player addPeriodicTimeObserverForInterval:CMTimeMake(1, 10) queue:dispatch_get_main_queue() usingBlock:^(CMTime time) {
-        [weakSelf.videoControls setCurrentTime:CMTimeGetSeconds(time)];
+        NSTimeInterval timeInSeconds = CMTimeGetSeconds(time);
+        [weakSelf.videoControls setCurrentTime:timeInSeconds];
+        [[CLUTimeDistributionController sharedController] setCurrentTime:timeInSeconds];
     }]];
 }
 
@@ -195,6 +198,9 @@ static void *AVSPPlayerLayerReadyForDisplay = &AVSPPlayerLayerReadyForDisplay;
         if (rate != 1.f) {
             if (_videoControls.currentTime == [self videoDuration] && _videoControls.isPlayButtonPlay) {
                 [_videoControls forceTogglePlayButtonState];
+                
+                CLUTimeDistributionController *timeDistributorController = [CLUTimeDistributionController sharedController];
+                [timeDistributorController setTimePlaybackStart:!timeDistributorController.timePlaybackStart];
             }
         }
     } else if (context == AVSPPlayerLayerReadyForDisplay) {
@@ -209,6 +215,16 @@ static void *AVSPPlayerLayerReadyForDisplay = &AVSPPlayerLayerReadyForDisplay;
 }
 
 #pragma mark - Utils
+
+- (void)play {
+    [_player play];
+    [[CLUTimeDistributionController sharedController] setTimePlaybackStart:YES];
+}
+
+- (void)pause {
+    [_player pause];
+    [[CLUTimeDistributionController sharedController] setTimePlaybackStart:NO];
+}
 
 - (double)videoDuration {
     AVPlayerItem *playerItem = _player.currentItem;
