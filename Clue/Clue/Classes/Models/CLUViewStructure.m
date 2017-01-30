@@ -18,6 +18,8 @@
         return nil;
     }
     [self JSONTimeRelatedDataFromDataItemsArray:self.rootDataItems toRootDataDictionary:self.rootDataDictionary];
+    // init root view item with default value for default timestamp
+    _rootViewItem = [self.rootDataDictionary objectForKey:[NSNumber numberWithInteger:self.currentTiestamp]];
     return self;
 }
 
@@ -34,8 +36,12 @@
     }
 }
 
-- (CLUUIView *)rootViewItem {
-    return [self.rootDataDictionary objectForKey:@0];
+- (void)updateCurrentTimestamp:(NSInteger)timestamp {
+    CLUUIView *viewForTimeStamp = [self.rootDataDictionary objectForKey:[NSNumber numberWithInteger:timestamp]];
+    if (viewForTimeStamp) {
+        _rootViewItem = viewForTimeStamp;
+    }
+    [super updateCurrentTimestamp:timestamp];
 }
 
 #pragma mark - Outline View Data Source Item

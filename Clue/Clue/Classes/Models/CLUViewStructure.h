@@ -12,6 +12,6 @@
 
 @interface CLUViewStructure : CLUTimeRelatedModule <CLUOutlineViewDataItem>
 
-- (CLUUIView *)rootViewItem;
+@property (nonatomic, readonly) CLUUIView *rootViewItem;
 
 @end
