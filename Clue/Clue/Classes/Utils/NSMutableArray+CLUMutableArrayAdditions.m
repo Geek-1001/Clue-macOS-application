@@ -48,7 +48,10 @@ static void *ArrayTypePropertyKey = &ArrayTypePropertyKey;
 
 - (CLUOutlineViewDataItemType)itemType {
     NSNumber *arrayType = [self arrayType];
-    CLUOutlineViewDataItemType type =  [arrayType integerValue];
+    CLUOutlineViewDataItemType type = CLUOutlineViewDataUndefinedItem;
+    if (arrayType) {
+        type = [arrayType integerValue];
+    }
     return type;
 }
 
