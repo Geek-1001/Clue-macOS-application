@@ -10,6 +10,7 @@
 
 @protocol CLUOutlineViewDataItem <NSObject>
 
+// TODO: Move to separate file
 typedef NS_ENUM(NSInteger, CLUOutlineViewDataItemType) {
     // View Types
     CLUOutlineViewDataUIViewItem,
@@ -38,6 +39,21 @@ typedef NS_ENUM(NSInteger, CLUOutlineViewDataItemType) {
     CLUOutlineViewDataPropertyLayoutMarginRightItem,
     CLUOutlineViewDataPropertyLayoutMarginLeftItem,
     CLUOutlineViewDataPropertyTextItem,
+    
+    // Network Types
+    CLUOutlineViewDataNetworkUndefinedItem,
+    CLUOutlineViewDataNetworkReceiveDataItem,
+    CLUOutlineViewDataNetworkReceiveRedirectItem,
+    CLUOutlineViewDataNetworkReceiveCompleteItem,
+    CLUOutlineViewDataNetworkPropertyAllHeadersItem,
+    CLUOutlineViewDataNetworkPropertyDataItem,
+    CLUOutlineViewDataNetworkPropertyErrorItem,
+    CLUOutlineViewDataNetworkPropertyHTTPMethodItem,
+    CLUOutlineViewDataNetworkPropertyRequestItem,
+    CLUOutlineViewDataNetworkPropertyResponseItem,
+    CLUOutlineViewDataNetworkPropertyStatusItem,
+    CLUOutlineViewDataNetworkPropertyTypeItem,
+    CLUOutlineViewDataNetworkPropertyURLItem,
     
     // Other
     CLUOutlineViewDataSubviewsArrayItem,
