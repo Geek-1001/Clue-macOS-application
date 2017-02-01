@@ -17,8 +17,7 @@
         return nil;
     }
     _rootNetworkEntitiesArray = [NSMutableArray new];
-    [_rootNetworkEntitiesArray setArrayName:@"Network Interactions"];
-    [_rootNetworkEntitiesArray setArrayType:[NSNumber numberWithInteger:CLUOutlineViewDataNetworkUndefinedItem]];
+    [self setupRootNetworkEntitiesArrayStyle];
     [self JSONTimeRelatedDataFromDataItemsArray:self.rootDataItems toRootDataDictionary:self.rootDataDictionary];
     return self;
 }
@@ -42,10 +41,16 @@
     }
 }
 
+- (void)setupRootNetworkEntitiesArrayStyle {
+    [_rootNetworkEntitiesArray setArrayName:@"Network Interactions"];
+    [_rootNetworkEntitiesArray setArrayType:[NSNumber numberWithInteger:CLUOutlineViewDataNetworkUndefinedItem]];
+}
+
 - (void)updateCurrentTimestamp:(NSInteger)timestamp {
     NSMutableArray *networkEntitiesArrayForTimestamp = [self.rootDataDictionary objectForKey:[NSNumber numberWithInteger:timestamp]];
     if (networkEntitiesArrayForTimestamp) {
         _rootNetworkEntitiesArray = networkEntitiesArrayForTimestamp;
+        [self setupRootNetworkEntitiesArrayStyle];
     }
     [super updateCurrentTimestamp:timestamp];
 }
