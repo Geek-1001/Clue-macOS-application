@@ -10,12 +10,14 @@
 #import "CLUVideo.h"
 #import "CLUDeviceInfo.h"
 #import "CLUViewStructure.h"
+#import "CLUNetwork.h"
 
 @interface CLUDocument : NSDocument
 
 @property (nonatomic, readonly) CLUVideo *video;
 @property (nonatomic, readonly) CLUDeviceInfo *deviceInfo;
 @property (nonatomic, readonly) CLUViewStructure *viewStructure;
+@property (nonatomic, readonly) CLUNetwork *network;
 
 @end
 
