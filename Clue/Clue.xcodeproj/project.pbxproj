@@ -13,7 +13,6 @@
 		E20C2CBF1DCE1EE600033248 /* CLUDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = E20C2CBE1DCE1EE600033248 /* CLUDocument.m */; };
 		E20C2CC21DCE1EE600033248 /* Document.xib in Resources */ = {isa = PBXBuildFile; fileRef = E20C2CC01DCE1EE600033248 /* Document.xib */; };
 		E20C2CC71DCE1EE600033248 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = E20C2CC51DCE1EE600033248 /* MainMenu.xib */; };
-		E211B5F81E3B47E900512126 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E211B5F71E3B47E900512126 /* Assets.xcassets */; };
 		E211B5FB1E3B4BF900512126 /* NSString+NSStringAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = E211B5FA1E3B4BF900512126 /* NSString+NSStringAddition.m */; };
 		E215C5781E37720E003E1091 /* CLUViewStructureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E215C5771E37720E003E1091 /* CLUViewStructureViewController.m */; };
 		E215C57C1E3782BA003E1091 /* CLUTimeRelatedModule.m in Sources */ = {isa = PBXBuildFile; fileRef = E215C57B1E3782BA003E1091 /* CLUTimeRelatedModule.m */; };
@@ -23,6 +22,7 @@
 		E257CB971E38B5300059E1B9 /* NSMutableArray+CLUMutableArrayAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = E257CB961E38B5300059E1B9 /* NSMutableArray+CLUMutableArrayAdditions.m */; };
 		E257CB9D1E38BE000059E1B9 /* CLUUIViewProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = E257CB9C1E38BE000059E1B9 /* CLUUIViewProperty.m */; };
 		E26E5B6A1E395D3D00AB49B1 /* CLUTableRowView.m in Sources */ = {isa = PBXBuildFile; fileRef = E26E5B691E395D3D00AB49B1 /* CLUTableRowView.m */; };
+		E27195FD1E4296BC007A4A55 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E27195FC1E4296BC007A4A55 /* Assets.xcassets */; };
 		E2791DD21DCE20FE0010A549 /* clue_document.icns in Resources */ = {isa = PBXBuildFile; fileRef = E2791DD11DCE20FE0010A549 /* clue_document.icns */; };
 		E27A4FE41E34DBF600382FF9 /* CLUDeviceInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = E27A4FE31E34DBF600382FF9 /* CLUDeviceInfo.m */; };
 		E27A50091E354C3700382FF9 /* CLUDeviceInfoTableRowView.m in Sources */ = {isa = PBXBuildFile; fileRef = E27A50081E354C3700382FF9 /* CLUDeviceInfoTableRowView.m */; };
@@ -64,7 +64,6 @@
 		E20C2CC11DCE1EE600033248 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/Document.xib; sourceTree = "<group>"; };
 		E20C2CC61DCE1EE600033248 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		E20C2CC81DCE1EE600033248 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E211B5F71E3B47E900512126 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E211B5F91E3B4BF900512126 /* NSString+NSStringAddition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+NSStringAddition.h"; sourceTree = "<group>"; };
 		E211B5FA1E3B4BF900512126 /* NSString+NSStringAddition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+NSStringAddition.m"; sourceTree = "<group>"; };
 		E215C5761E37720E003E1091 /* CLUViewStructureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLUViewStructureViewController.h; sourceTree = "<group>"; };
@@ -86,6 +85,7 @@
 		E257CB9C1E38BE000059E1B9 /* CLUUIViewProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLUUIViewProperty.m; sourceTree = "<group>"; };
 		E26E5B681E395D3D00AB49B1 /* CLUTableRowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLUTableRowView.h; sourceTree = "<group>"; };
 		E26E5B691E395D3D00AB49B1 /* CLUTableRowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLUTableRowView.m; sourceTree = "<group>"; };
+		E27195FC1E4296BC007A4A55 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E2791DD11DCE20FE0010A549 /* clue_document.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = clue_document.icns; sourceTree = "<group>"; };
 		E27A4FE21E34DBF600382FF9 /* CLUDeviceInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLUDeviceInfo.h; sourceTree = "<group>"; };
 		E27A4FE31E34DBF600382FF9 /* CLUDeviceInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLUDeviceInfo.m; sourceTree = "<group>"; };
@@ -184,7 +184,7 @@
 				E2791DD11DCE20FE0010A549 /* clue_document.icns */,
 				E20C2CC01DCE1EE600033248 /* Document.xib */,
 				E20C2CC51DCE1EE600033248 /* MainMenu.xib */,
-				E211B5F71E3B47E900512126 /* Assets.xcassets */,
+				E27195FC1E4296BC007A4A55 /* Assets.xcassets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -346,7 +346,7 @@
 			files = (
 				E2791DD21DCE20FE0010A549 /* clue_document.icns in Resources */,
 				E20C2CC21DCE1EE600033248 /* Document.xib in Resources */,
-				E211B5F81E3B47E900512126 /* Assets.xcassets in Resources */,
+				E27195FD1E4296BC007A4A55 /* Assets.xcassets in Resources */,
 				E20C2CC71DCE1EE600033248 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
