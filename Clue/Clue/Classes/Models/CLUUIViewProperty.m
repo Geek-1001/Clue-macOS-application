@@ -84,6 +84,7 @@
     }
 }
 
+// TODO: refactor. Method is too huge
 - (CLUOutlineViewDataItemType)itemType {
     if ([_name containsCaseInsensitiveString:@"color"]) {
         return CLUOutlineViewDataPropertyColorItem;
@@ -113,6 +114,16 @@
         return CLUOutlineViewDataPropertyXItem;
     } else if ([_name isEqualToString:@"y"]) {
         return CLUOutlineViewDataPropertyYItem;
+    } else if ([_name isEqualToString:@"statusCode"]) {
+        return CLUOutlineViewDataNetworkPropertyStatusItem;
+    } else if ([_name containsCaseInsensitiveString:@"header"]) {
+        return CLUOutlineViewDataNetworkPropertyAllHeadersItem;
+    } else if ([_name isEqualToString:@"HTTPMethod"]) {
+        return CLUOutlineViewDataNetworkPropertyHTTPMethodItem;
+    } else if ([_name containsCaseInsensitiveString:@"url"]) {
+        return CLUOutlineViewDataNetworkPropertyURLItem;
+    } else if ([_name containsCaseInsensitiveString:@"type"]) {
+        return CLUOutlineViewDataNetworkPropertyTypeItem;
     }
     
     return CLUOutlineViewDataUndefinedPropertyItem;
