@@ -60,14 +60,18 @@
     }
 }
 
+- (BOOL)hasSingleNestedValue {
+    return _values.count == 1 && [[_values firstObject] isKindOfClass:[CLUUIViewProperty class]];
+}
+
 #pragma mark - Outline View Data Source Item
 
 - (NSInteger)numberOfChildren {
-    return _values.count == 1 ? 0 : _values.count;
+    return _values.count == 1 && ![self hasSingleNestedValue] ? 0 : _values.count;
 }
 
 - (BOOL)isItemExpandable {
-    return _values.count > 1;
+    return [self hasSingleNestedValue] || _values.count > 1;
 }
 
 - (id _Nonnull)childAtIndex:(NSInteger)index {
@@ -75,9 +79,9 @@
 }
 
 - (NSString * _Nonnull)itemName {
-    if (_values.count > 1) {
+    if (_values.count > 1 || [self hasSingleNestedValue]) {
         return _name;
-    } else if (_values.count > 0) {
+    } else if (_values.count > 0 && ![self hasSingleNestedValue]) {
         return [NSString stringWithFormat:@"%@: %@", _name, _values[0]];
     } else {
         return [NSString stringWithFormat:@"%@: No Value", _name];
