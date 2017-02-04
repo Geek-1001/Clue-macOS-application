@@ -11,6 +11,7 @@
 #import "CLUTabBarItem.h"
 #import "CLUDeviceInfoViewController.h"
 #import "CLUViewStructureViewController.h"
+#import "CLUNetworkViewController.h"
 
 @interface CLUDetailsViewController () <TabsControlDataSource, TabsControlDelegate>
 
@@ -18,6 +19,7 @@
 @property (nonatomic) NSArray *tabControlItems;
 @property (weak) IBOutlet CLUDeviceInfoViewController *deviceInfoViewController;
 @property (weak) IBOutlet CLUViewStructureViewController *viewStructureViewController;
+@property (weak) IBOutlet CLUNetworkViewController *networkViewController;
 
 @end
 
@@ -84,6 +86,7 @@
 - (void)tabsControlDidChangeSelection:(TabsControl *)control item:(CLUTabBarItem *)item {
     [_deviceInfoViewController.view setHidden:(item.type != CLUTabBarItemDeviceInfo)];
     [_viewStructureViewController.view setHidden:(item.type != CLUTabBarItemViewStructure)];
+    [_networkViewController.view setHidden:(item.type != CLUTabBarItemNetwork)];
 }
 
 @end
