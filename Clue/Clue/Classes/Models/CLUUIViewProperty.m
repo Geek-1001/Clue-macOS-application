@@ -128,6 +128,14 @@
         return CLUOutlineViewDataNetworkPropertyURLItem;
     } else if ([_name containsCaseInsensitiveString:@"type"]) {
         return CLUOutlineViewDataNetworkPropertyTypeItem;
+    } else if ([_name isEqualToString:@"Error"]) {
+        return CLUOutlineViewDataNetworkPropertyErrorItem;
+    } else if ([_name isEqualToString:@"Response"]) {
+        return CLUOutlineViewDataNetworkPropertyResponseItem;
+    } else if ([_name isEqualToString:@"New Request"]) {
+        return CLUOutlineViewDataNetworkPropertyRequestItem;
+    } else if ([_name isEqualToString:@"Data"]) {
+        return CLUOutlineViewDataNetworkPropertyDataItem;
     }
     
     return CLUOutlineViewDataUndefinedPropertyItem;
