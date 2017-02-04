@@ -34,34 +34,10 @@
     }
     NSArray<NSDictionary *> *propertiesJSONArray = [jsonDictionary objectForKey:PROPERTIES_KEY];
     for (int i = 0; i < propertiesJSONArray.count; i++) {
-        NSMutableArray *subpropertiesArray = [NSMutableArray new];
-        [self propertyItemFromJSONDictionary:propertiesJSONArray[i] toArray:subpropertiesArray];
-        
-        [subpropertiesArray setArrayName:[self subproprtyItemArrayNameForLabel:label andIndex:i]];
-        [subpropertiesArray setArrayType:[self subproprtyItemArrayTypeAsNumberForName:[subpropertiesArray arrayName]]];
-        
-        [propertiesArray addObject:subpropertiesArray];
-    }
-}
-
-- (void)propertyItemFromJSONDictionary:(NSDictionary *)jsonDictionary toArray:(inout NSMutableArray *)subpropertiesArray {
-    if (!jsonDictionary || !subpropertiesArray) {
-        return;
-    }
-    NSArray *allsubpropertiesJSONKeys = [jsonDictionary allKeys];
-    NSArray *allsubpropertiesJSONValues = [jsonDictionary allValues];
-    for (int i = 0; i < allsubpropertiesJSONKeys.count; i++) {
-        CLUUIViewProperty *property;
-        if ([allsubpropertiesJSONValues[i] isKindOfClass:[NSDictionary class]]) {
-            property = [[CLUUIViewProperty alloc] initWithJSONRepresentation:allsubpropertiesJSONValues[i]
-                                                                 forRootName:allsubpropertiesJSONKeys[i]];
-        } else {
-            property = [[CLUUIViewProperty alloc] initWithName:allsubpropertiesJSONKeys[i]
-                                                         value:allsubpropertiesJSONValues[i]];
-        }
-        if (property) {
-            [subpropertiesArray addObject:property];
-        }
+        NSString *arrayName = [self subproprtyItemArrayNameForLabel:label andIndex:i];
+        CLUUIViewProperty *property = [[CLUUIViewProperty alloc] initWithJSONRepresentation:propertiesJSONArray[i]
+                                                                                forRootName:arrayName];
+        [propertiesArray addObject:property];
     }
 }
 
@@ -81,21 +57,6 @@
         return @"Response";
     }
     return @"Undefined";
-}
-
-// TODO: refactor. Same issue from previous method here
-- (NSNumber *)subproprtyItemArrayTypeAsNumberForName:(NSString *)arrayName {
-    CLUOutlineViewDataItemType arrayType = CLUOutlineViewDataNetworkUndefinedItem;
-    if ([arrayName isEqualToString:@"Error"]) {
-        arrayType = CLUOutlineViewDataNetworkPropertyErrorItem;
-    } else if ([arrayName isEqualToString:@"Response"]) {
-        arrayType = CLUOutlineViewDataNetworkPropertyResponseItem;
-    } else if ([arrayName isEqualToString:@"New Request"]) {
-        arrayType = CLUOutlineViewDataNetworkPropertyRequestItem;
-    } else if ([arrayName isEqualToString:@"Data"]) {
-        arrayType = CLUOutlineViewDataNetworkPropertyDataItem;
-    }
-    return [NSNumber numberWithInteger:arrayType];
 }
 
 #pragma mark - Outline View Data Item
