@@ -6,8 +6,8 @@
 //  Copyright © 2017 Ahmed Sulaiman. All rights reserved.
 //
 
-#import "CLURootViewController.h"
+#import "CLUTimeRelatedModuleViewController.h"
 
-@interface CLUNetworkViewController : CLURootViewController
+@interface CLUNetworkViewController : CLUTimeRelatedModuleViewController
 
 @end
