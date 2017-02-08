@@ -11,6 +11,7 @@
 #import "CLUDeviceInfo.h"
 #import "CLUViewStructure.h"
 #import "CLUNetwork.h"
+#import "CLUUserInteractions.h"
 
 @interface CLUDocument : NSDocument
 
@@ -18,6 +19,7 @@
 @property (nonatomic, readonly) CLUDeviceInfo *deviceInfo;
 @property (nonatomic, readonly) CLUViewStructure *viewStructure;
 @property (nonatomic, readonly) CLUNetwork *network;
+@property (nonatomic, readonly) CLUUserInteractions *userInteractions;
 
 @end
 

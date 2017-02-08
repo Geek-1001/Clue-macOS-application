@@ -80,6 +80,8 @@
             _viewStructure = [[CLUViewStructure alloc] initWithURL:fileURL];
         } else if ([[file filename] isEqualToString:@"module_network.json"]) {
             _network = [[CLUNetwork alloc] initWithURL:fileURL];
+        } else if ([[file filename] isEqualToString:@"module_interaction.json"]) {
+            _userInteractions = [[CLUUserInteractions alloc] initWithURL:fileURL];
         }
     }
     return YES;
