@@ -100,7 +100,7 @@
         return CLUOutlineViewDataPropertyHeightItem;
     } else if ([_name containsCaseInsensitiveString:@"width"]) {
         return CLUOutlineViewDataPropertyWidthItem;
-    } else if ([_name containsCaseInsensitiveString:@"layoutMargins"]) {
+    } else if ([_name containsCaseInsensitiveString:@"layoutMargins"] || [_name isEqualToString:@"locationInWindow"]) {
         return CLUOutlineViewDataPropertyLayoutMarginItem;
     } else if ([_name containsCaseInsensitiveString:@"top"]) {
         return CLUOutlineViewDataPropertyLayoutMarginTopItem;
@@ -136,6 +136,10 @@
         return CLUOutlineViewDataNetworkPropertyRequestItem;
     } else if ([_name isEqualToString:@"Data"]) {
         return CLUOutlineViewDataNetworkPropertyDataItem;
+    } else if ([_name isEqualToString:@"Touch"]) {
+        return CLUOutlineViewDataInteractionUndefinedItem;
+    } else if ([_name isEqualToString:@"tapCount"]) {
+        return CLUOutlineViewDataInteractionTouchCountPropertyItem;
     }
     
     return CLUOutlineViewDataUndefinedPropertyItem;
