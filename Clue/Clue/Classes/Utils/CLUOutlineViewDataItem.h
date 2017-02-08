@@ -55,6 +55,13 @@ typedef NS_ENUM(NSInteger, CLUOutlineViewDataItemType) {
     CLUOutlineViewDataNetworkPropertyTypeItem,
     CLUOutlineViewDataNetworkPropertyURLItem,
     
+    // Interaction Types
+    CLUOutlineViewDataInteractionUndefinedItem,
+    CLUOutlineViewDataInteractionTouchCountPropertyItem,
+    CLUOutlineViewDataInteractionBeganItem,
+    CLUOutlineViewDataInteractionEndedItem,
+    CLUOutlineViewDataInteractionMovedItem,
+    
     // Other
     CLUOutlineViewDataSubviewsArrayItem,
     CLUOutlineViewDataPropertiesArrayItem,
