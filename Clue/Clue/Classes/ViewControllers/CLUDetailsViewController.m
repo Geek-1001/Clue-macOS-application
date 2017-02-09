@@ -12,6 +12,7 @@
 #import "CLUDeviceInfoViewController.h"
 #import "CLUViewStructureViewController.h"
 #import "CLUNetworkViewController.h"
+#import "CLUUserInteractionsViewController.h"
 
 @interface CLUDetailsViewController () <TabsControlDataSource, TabsControlDelegate>
 
@@ -20,6 +21,7 @@
 @property (weak) IBOutlet CLUDeviceInfoViewController *deviceInfoViewController;
 @property (weak) IBOutlet CLUViewStructureViewController *viewStructureViewController;
 @property (weak) IBOutlet CLUNetworkViewController *networkViewController;
+@property (weak) IBOutlet CLUUserInteractionsViewController *userInteractionsViewController;
 
 @end
 
@@ -87,6 +89,7 @@
     [_deviceInfoViewController.view setHidden:(item.type != CLUTabBarItemDeviceInfo)];
     [_viewStructureViewController.view setHidden:(item.type != CLUTabBarItemViewStructure)];
     [_networkViewController.view setHidden:(item.type != CLUTabBarItemNetwork)];
+    [_userInteractionsViewController.view setHidden:(item.type != CLUTabBarItemUserInetraction)];
 }
 
 @end
