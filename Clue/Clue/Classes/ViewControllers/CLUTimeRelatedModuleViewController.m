@@ -132,7 +132,17 @@
         case CLUOutlineViewDataPropertyXItem: imageName = @"x-property-icon";
             break;
         case CLUOutlineViewDataPropertyYItem: imageName = @"y-property-icon";
-            break;            
+            break;
+        case CLUOutlineViewDataInteractionUndefinedItem: imageName = @"touch-interaction-property-icon";
+            break;
+        case CLUOutlineViewDataInteractionTouchCountPropertyItem: imageName = @"touch-count-interaction-property-icon";
+            break;
+        case CLUOutlineViewDataInteractionBeganItem: imageName = @"touch-began-interaction-property-icon";
+            break;
+        case CLUOutlineViewDataInteractionEndedItem: imageName = @"touch-ended-interaction-property-icon";
+            break;
+        case CLUOutlineViewDataInteractionMovedItem: imageName = @"touch-moved-interaction-property-icon";
+            break;
         default:
             return nil;
     }
