@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11762"/>
+        <capability name="box content view" minToolsVersion="7.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -17,7 +18,7 @@
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
             <rect key="contentRect" x="466" y="263" width="900" height="667"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1440" height="878"/>
-            <value key="minSize" type="size" width="630" height="455"/>
+            <value key="minSize" type="size" width="630" height="454"/>
             <view key="contentView" wantsLayer="YES" id="gIp-Ho-8D9">
                 <rect key="frame" x="0.0" y="0.0" width="900" height="667"/>
                 <autoresizingMask key="autoresizingMask"/>
@@ -115,11 +116,11 @@
                                             </subviews>
                                         </clipView>
                                         <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="Kk5-Q4-4Mw">
-                                            <rect key="frame" x="1" y="119" width="223" height="15"/>
+                                            <rect key="frame" x="0.0" y="-16" width="0.0" height="16"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </scroller>
                                         <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="NO" id="vR9-mk-fYk">
-                                            <rect key="frame" x="224" y="17" width="15" height="102"/>
+                                            <rect key="frame" x="-16" y="0.0" width="16" height="0.0"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </scroller>
                                     </scrollView>
@@ -326,6 +327,43 @@
                             </customView>
                         </subviews>
                     </customView>
+                    <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xfH-bA-j2h" userLabel="Timeline">
+                        <rect key="frame" x="375" y="0.0" width="525" height="138"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <subviews>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fyk-dx-Xma" customClass="CLUTextLabel">
+                                <rect key="frame" x="172" y="115" width="181" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="00:00 / 00:00" id="Gdc-99-h7f">
+                                    <font key="font" metaFont="system" size="12"/>
+                                    <color key="textColor" red="0.97647058823529409" green="0.97647058823529409" blue="0.97647058823529409" alpha="0.5" colorSpace="calibratedRGB"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <box fixedFrame="YES" boxType="custom" borderType="line" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="V42-VU-ggI">
+                                <rect key="frame" x="0.0" y="108" width="525" height="1"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <view key="contentView" ambiguous="YES" id="1vk-5T-oGV">
+                                    <rect key="frame" x="1" y="1" width="523" height="0.0"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <color key="borderColor" red="0.20784313725490194" green="0.20784313725490194" blue="0.20784313725490194" alpha="1" colorSpace="calibratedRGB"/>
+                            </box>
+                            <box fixedFrame="YES" boxType="custom" borderType="line" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="lfB-Po-4r0">
+                                <rect key="frame" x="0.0" y="0.0" width="1" height="138"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <view key="contentView" ambiguous="YES" id="pMp-bm-xBt">
+                                    <rect key="frame" x="1" y="1" width="0.0" height="136"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <color key="borderColor" red="0.094117647058823528" green="0.094117647058823528" blue="0.094117647058823528" alpha="1" colorSpace="calibratedRGB"/>
+                            </box>
+                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="geR-lJ-Cew" customClass="CLUTimelineSlider">
+                                <rect key="frame" x="1" y="0.0" width="524" height="109"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            </customView>
+                        </subviews>
+                    </customView>
                 </subviews>
             </view>
             <connections>
@@ -378,6 +416,13 @@
                 <outlet property="outlineView" destination="rhc-Bd-KeZ" id="Wvo-GN-NSw"/>
                 <outlet property="scrollView" destination="Tac-lo-mX6" id="d7o-Q9-Shp"/>
                 <outlet property="view" destination="FEw-wl-Q2b" id="LkE-ED-FAw"/>
+            </connections>
+        </viewController>
+        <viewController id="p9O-60-zyL" customClass="CLUTimelineViewController">
+            <connections>
+                <outlet property="timeLabel" destination="Fyk-dx-Xma" id="dST-WE-ycK"/>
+                <outlet property="timelineSlider" destination="geR-lJ-Cew" id="rcI-zx-P1E"/>
+                <outlet property="view" destination="xfH-bA-j2h" id="4fU-jO-cZw"/>
             </connections>
         </viewController>
     </objects>
