@@ -29,6 +29,7 @@
 		E25A3B0F1E465CF60044BD06 /* CLUInteractionEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = E25A3B0E1E465CF60044BD06 /* CLUInteractionEntity.m */; };
 		E25A3B151E467FDB0044BD06 /* CLUTimeRelatedModuleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E25A3B141E467FDB0044BD06 /* CLUTimeRelatedModuleViewController.m */; };
 		E25A3B181E468B7F0044BD06 /* CLUUserInteractionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E25A3B171E468B7F0044BD06 /* CLUUserInteractionsViewController.m */; };
+		E26D6FCF1E565BCA00DE07BE /* CLUTimelineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E26D6FCD1E565BCA00DE07BE /* CLUTimelineViewController.m */; };
 		E26D6FD31E5661EB00DE07BE /* CLUTimelineSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = E26D6FD21E5661EB00DE07BE /* CLUTimelineSlider.m */; };
 		E26D6FD61E5665E600DE07BE /* CLUTimelineSliderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E26D6FD51E5665E600DE07BE /* CLUTimelineSliderCell.m */; };
 		E26E5B6A1E395D3D00AB49B1 /* CLUTableRowView.m in Sources */ = {isa = PBXBuildFile; fileRef = E26E5B691E395D3D00AB49B1 /* CLUTableRowView.m */; };
@@ -109,6 +110,8 @@
 		E25A3B141E467FDB0044BD06 /* CLUTimeRelatedModuleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLUTimeRelatedModuleViewController.m; sourceTree = "<group>"; };
 		E25A3B161E468B7F0044BD06 /* CLUUserInteractionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLUUserInteractionsViewController.h; sourceTree = "<group>"; };
 		E25A3B171E468B7F0044BD06 /* CLUUserInteractionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLUUserInteractionsViewController.m; sourceTree = "<group>"; };
+		E26D6FCC1E565BCA00DE07BE /* CLUTimelineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLUTimelineViewController.h; sourceTree = "<group>"; };
+		E26D6FCD1E565BCA00DE07BE /* CLUTimelineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLUTimelineViewController.m; sourceTree = "<group>"; };
 		E26D6FD11E5661EB00DE07BE /* CLUTimelineSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLUTimelineSlider.h; sourceTree = "<group>"; };
 		E26D6FD21E5661EB00DE07BE /* CLUTimelineSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLUTimelineSlider.m; sourceTree = "<group>"; };
 		E26D6FD41E5665E600DE07BE /* CLUTimelineSliderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLUTimelineSliderCell.h; sourceTree = "<group>"; };
@@ -174,6 +177,8 @@
 				E25A3B171E468B7F0044BD06 /* CLUUserInteractionsViewController.m */,
 				E25A3B131E467FDB0044BD06 /* CLUTimeRelatedModuleViewController.h */,
 				E25A3B141E467FDB0044BD06 /* CLUTimeRelatedModuleViewController.m */,
+				E26D6FCC1E565BCA00DE07BE /* CLUTimelineViewController.h */,
+				E26D6FCD1E565BCA00DE07BE /* CLUTimelineViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -424,6 +429,7 @@
 				E23B128D1E3E27AA00EE6CDF /* CLUTimeDistributionController.m in Sources */,
 				E257CB971E38B5300059E1B9 /* NSMutableArray+CLUMutableArrayAdditions.m in Sources */,
 				E20B87451DCE248A00D25D21 /* CLUVideoViewController.m in Sources */,
+				E26D6FCF1E565BCA00DE07BE /* CLUTimelineViewController.m in Sources */,
 				E22538E91E590B9300F4FBB7 /* CLUTimelineEvent.m in Sources */,
 				E26D6FD31E5661EB00DE07BE /* CLUTimelineSlider.m in Sources */,
 				E28E17C51DE106F5000CA903 /* CLUVideo.m in Sources */,
