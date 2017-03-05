@@ -17,6 +17,7 @@
 		E215C5781E37720E003E1091 /* CLUViewStructureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E215C5771E37720E003E1091 /* CLUViewStructureViewController.m */; };
 		E215C57C1E3782BA003E1091 /* CLUTimeRelatedModule.m in Sources */ = {isa = PBXBuildFile; fileRef = E215C57B1E3782BA003E1091 /* CLUTimeRelatedModule.m */; };
 		E215C57F1E3789E0003E1091 /* CLUViewStructure.m in Sources */ = {isa = PBXBuildFile; fileRef = E215C57E1E3789E0003E1091 /* CLUViewStructure.m */; };
+		E22538E91E590B9300F4FBB7 /* CLUTimelineEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = E22538E81E590B9300F4FBB7 /* CLUTimelineEvent.m */; };
 		E238630B1E3FE1E40056F34E /* CLUNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = E238630A1E3FE1E40056F34E /* CLUNetwork.m */; };
 		E238630E1E3FE3280056F34E /* CLUNetworkEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = E238630D1E3FE3280056F34E /* CLUNetworkEntity.m */; };
 		E23863111E40A2180056F34E /* CLUNetworkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E23863101E40A2180056F34E /* CLUNetworkViewController.m */; };
@@ -81,6 +82,8 @@
 		E215C57B1E3782BA003E1091 /* CLUTimeRelatedModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLUTimeRelatedModule.m; sourceTree = "<group>"; };
 		E215C57D1E3789E0003E1091 /* CLUViewStructure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLUViewStructure.h; sourceTree = "<group>"; };
 		E215C57E1E3789E0003E1091 /* CLUViewStructure.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLUViewStructure.m; sourceTree = "<group>"; };
+		E22538E71E590B9300F4FBB7 /* CLUTimelineEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLUTimelineEvent.h; sourceTree = "<group>"; };
+		E22538E81E590B9300F4FBB7 /* CLUTimelineEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLUTimelineEvent.m; sourceTree = "<group>"; };
 		E23863091E3FE1E40056F34E /* CLUNetwork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLUNetwork.h; sourceTree = "<group>"; };
 		E238630A1E3FE1E40056F34E /* CLUNetwork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLUNetwork.m; sourceTree = "<group>"; };
 		E238630C1E3FE3280056F34E /* CLUNetworkEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLUNetworkEntity.h; sourceTree = "<group>"; };
@@ -284,6 +287,8 @@
 				E25A3B0B1E4659610044BD06 /* CLUUserInteractions.m */,
 				E25A3B0D1E465CF60044BD06 /* CLUInteractionEntity.h */,
 				E25A3B0E1E465CF60044BD06 /* CLUInteractionEntity.m */,
+				E22538E71E590B9300F4FBB7 /* CLUTimelineEvent.h */,
+				E22538E81E590B9300F4FBB7 /* CLUTimelineEvent.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -414,6 +419,7 @@
 				E23B128D1E3E27AA00EE6CDF /* CLUTimeDistributionController.m in Sources */,
 				E257CB971E38B5300059E1B9 /* NSMutableArray+CLUMutableArrayAdditions.m in Sources */,
 				E20B87451DCE248A00D25D21 /* CLUVideoViewController.m in Sources */,
+				E22538E91E590B9300F4FBB7 /* CLUTimelineEvent.m in Sources */,
 				E28E17C51DE106F5000CA903 /* CLUVideo.m in Sources */,
 				E25A3B0C1E4659610044BD06 /* CLUUserInteractions.m in Sources */,
 				E2FAFF0A1E34D37700C43677 /* CLUDeviceInfoViewController.m in Sources */,
