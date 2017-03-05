@@ -185,6 +185,7 @@ static void *AVSPPlayerLayerReadyForDisplay = &AVSPPlayerLayerReadyForDisplay;
                 break;
             case AVPlayerItemStatusReadyToPlay:
                 [_videoControls setVideoDuration:[self videoDuration]];
+                [[CLUTimeDistributionController sharedController] setDuration:[self videoDuration]];
                 enable = YES;
                 break;
             case AVPlayerItemStatusFailed:
