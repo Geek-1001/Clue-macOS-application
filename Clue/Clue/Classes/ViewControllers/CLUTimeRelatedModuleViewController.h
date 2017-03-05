@@ -14,6 +14,7 @@
 @interface CLUTimeRelatedModuleViewController : CLURootViewController <NSOutlineViewDataSource, NSOutlineViewDelegate, CLUTimeDistributionDelegate, CLUTimeRelatedModuleDelegate>
 
 @property (nonatomic) id<CLUOutlineViewDataItem> rootOutlineViewObject;
+@property (nonatomic, weak) NSOutlineView *outlineViewReference;
 
 - (void)configureStyleForOutlineView:(inout NSOutlineView *)outlineView andScrollView:(inout NSScrollView *)scrollView;
 

@@ -10,6 +10,7 @@
 #import "CLUTimeDistributionController.h"
 #import "CLUTableRowView.h"
 #import "NSMutableArray+CLUMutableArrayAdditions.h"
+#import <Carbon/Carbon.h>
 
 #define kDefaultOutlineViewRowHeight 20
 
@@ -37,6 +38,20 @@
                                                          green:63/255.0
                                                           blue:63/255.0
                                                          alpha:1] CGColor]];
+}
+
+- (void)keyDown:(NSEvent *)event {
+    if (!_outlineViewReference) {
+        return;
+    }
+    
+    NSEventModifierFlags currentEventFlags = [NSEvent modifierFlags];
+    if (event.keyCode == kVK_ANSI_C && currentEventFlags == NSEventModifierFlagCommand) {
+        id<CLUOutlineViewDataItem> item = [_outlineViewReference itemAtRow:[_outlineViewReference selectedRow]];
+        NSPasteboard *generalPasteboard = [NSPasteboard generalPasteboard];
+        [generalPasteboard declareTypes:@[NSStringPboardType] owner:nil];
+        [generalPasteboard setString:[item itemName] forType:NSStringPboardType];
+    }
 }
 
 #pragma mark - Utils
