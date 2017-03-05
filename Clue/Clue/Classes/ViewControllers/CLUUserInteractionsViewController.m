@@ -29,6 +29,7 @@
     _userInteractions = document.userInteractions;
     _userInteractions.delegate = self;
     self.rootOutlineViewObject = _userInteractions.rootUserIntercationsArray;
+    self.outlineViewReference = _outlineView;
     
     [self configureStyleForOutlineView:_outlineView andScrollView:_scrollView];
 }

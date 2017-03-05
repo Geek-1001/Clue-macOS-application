@@ -29,6 +29,7 @@
     _network = document.network;
     _network.delegate = self;
     self.rootOutlineViewObject = _network.rootNetworkEntitiesArray;
+    self.outlineViewReference = _outlineView;
     
     [self configureStyleForOutlineView:_outlineView andScrollView:_scrollView];
 }

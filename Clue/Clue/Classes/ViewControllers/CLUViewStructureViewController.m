@@ -29,6 +29,7 @@
     _viewStructure = document.viewStructure;
     _viewStructure.delegate = self;
     self.rootOutlineViewObject = _viewStructure.rootViewItem;
+    self.outlineViewReference = _outlineView;
 
     [self configureStyleForOutlineView:_outlineView andScrollView:_scrollView];
 }
