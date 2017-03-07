@@ -39,6 +39,7 @@
 		E27A50091E354C3700382FF9 /* CLUDeviceInfoTableRowView.m in Sources */ = {isa = PBXBuildFile; fileRef = E27A50081E354C3700382FF9 /* CLUDeviceInfoTableRowView.m */; };
 		E28E17C51DE106F5000CA903 /* CLUVideo.m in Sources */ = {isa = PBXBuildFile; fileRef = E28E17C41DE106F5000CA903 /* CLUVideo.m */; };
 		E29154541E32261900619F5D /* CLUDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E29154531E32261900619F5D /* CLUDetailsViewController.m */; };
+		E2A9E9EB1E6F5CF6005FCD29 /* NSColor+CLUStyleAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = E2A9E9EA1E6F5CF6005FCD29 /* NSColor+CLUStyleAdditions.m */; };
 		E2BF90E21E32B1EA00B8F18D /* KPCTabsControl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2BF90E11E32B1EA00B8F18D /* KPCTabsControl.framework */; };
 		E2BF90E31E32B1F500B8F18D /* KPCTabsControl.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = E2BF90E11E32B1EA00B8F18D /* KPCTabsControl.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E2BF90E61E32B36000B8F18D /* CLUTabBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = E2BF90E51E32B36000B8F18D /* CLUTabBarItem.m */; };
@@ -129,6 +130,8 @@
 		E28E17C41DE106F5000CA903 /* CLUVideo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLUVideo.m; sourceTree = "<group>"; };
 		E29154521E32261900619F5D /* CLUDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLUDetailsViewController.h; sourceTree = "<group>"; };
 		E29154531E32261900619F5D /* CLUDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLUDetailsViewController.m; sourceTree = "<group>"; };
+		E2A9E9E91E6F5CF6005FCD29 /* NSColor+CLUStyleAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSColor+CLUStyleAdditions.h"; sourceTree = "<group>"; };
+		E2A9E9EA1E6F5CF6005FCD29 /* NSColor+CLUStyleAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSColor+CLUStyleAdditions.m"; sourceTree = "<group>"; };
 		E2BF90E11E32B1EA00B8F18D /* KPCTabsControl.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = KPCTabsControl.framework; sourceTree = "<group>"; };
 		E2BF90E41E32B36000B8F18D /* CLUTabBarItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLUTabBarItem.h; sourceTree = "<group>"; };
 		E2BF90E51E32B36000B8F18D /* CLUTabBarItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLUTabBarItem.m; sourceTree = "<group>"; };
@@ -266,6 +269,8 @@
 				E211B5FA1E3B4BF900512126 /* NSString+NSStringAddition.m */,
 				E23B12881E3E20BF00EE6CDF /* CLUTimeRelatedModuleDelegate.h */,
 				E23B12891E3E253600EE6CDF /* CLUTimeDistributionDelegate.h */,
+				E2A9E9E91E6F5CF6005FCD29 /* NSColor+CLUStyleAdditions.h */,
+				E2A9E9EA1E6F5CF6005FCD29 /* NSColor+CLUStyleAdditions.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -430,6 +435,7 @@
 				E257CB971E38B5300059E1B9 /* NSMutableArray+CLUMutableArrayAdditions.m in Sources */,
 				E20B87451DCE248A00D25D21 /* CLUVideoViewController.m in Sources */,
 				E26D6FCF1E565BCA00DE07BE /* CLUTimelineViewController.m in Sources */,
+				E2A9E9EB1E6F5CF6005FCD29 /* NSColor+CLUStyleAdditions.m in Sources */,
 				E22538E91E590B9300F4FBB7 /* CLUTimelineEvent.m in Sources */,
 				E26D6FD31E5661EB00DE07BE /* CLUTimelineSlider.m in Sources */,
 				E28E17C51DE106F5000CA903 /* CLUVideo.m in Sources */,
