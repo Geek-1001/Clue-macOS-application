@@ -11,6 +11,7 @@
 #import "CLUTableRowView.h"
 #import "NSMutableArray+CLUMutableArrayAdditions.h"
 #import <Carbon/Carbon.h>
+#import "NSColor+CLUStyleAdditions.h"
 
 #define kDefaultOutlineViewRowHeight 20
 
@@ -34,10 +35,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.view setWantsLayer:YES];
-    [self.view.layer setBackgroundColor:[[NSColor colorWithRed:63/255.0
-                                                         green:63/255.0
-                                                          blue:63/255.0
-                                                         alpha:1] CGColor]];
+    [self.view.layer setBackgroundColor:[[NSColor clu_backgroundLight] CGColor]];
 }
 
 - (void)keyDown:(NSEvent *)event {
@@ -58,7 +56,7 @@
 
 - (void)configureStyleForOutlineView:(inout NSOutlineView *)outlineView
                        andScrollView:(inout NSScrollView *)scrollView {
-    [scrollView setBackgroundColor:[NSColor colorWithRed:63/255.0 green:63/255.0 blue:63/255.0 alpha:1]];
+    [scrollView setBackgroundColor:[NSColor clu_backgroundLight]];
     [outlineView setBackgroundColor:scrollView.backgroundColor];
     outlineView.dataSource = self;
     outlineView.delegate = self;

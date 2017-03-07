@@ -7,6 +7,7 @@
 //
 
 #import "CLUTimelineSliderCell.h"
+#import "NSColor+CLUStyleAdditions.h"
 
 @implementation CLUTimelineSliderCell
 
@@ -23,7 +24,7 @@
     rect.origin.y = rect.origin.y - 40;
     CGFloat knobYValue = 0;
     NSBezierPath *backgroundPath = [NSBezierPath bezierPathWithRoundedRect:NSMakeRect(knobXValue, knobYValue, 1, 120) xRadius:0 yRadius:0];
-    [[NSColor colorWithRed:250/255.0 green:105/255.0 blue:97/255.0 alpha:1] setFill];
+    [[NSColor clu_accentRed] setFill];
     [backgroundPath fill];
 
     NSBezierPath *trianglePath = [NSBezierPath bezierPath];
@@ -31,7 +32,7 @@
     [trianglePath lineToPoint:NSMakePoint(knobXValue - 7, knobYValue)];
     [trianglePath lineToPoint:NSMakePoint(knobXValue + 7, knobYValue)];
     [trianglePath closePath];
-    [[NSColor colorWithRed:250/255.0 green:105/255.0 blue:97/255.0 alpha:1] set];
+    [[NSColor clu_accentRed] set];
     [trianglePath fill];
 }
 

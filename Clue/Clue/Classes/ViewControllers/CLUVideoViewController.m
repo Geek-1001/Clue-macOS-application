@@ -12,6 +12,7 @@
 #import "CLUVideoControlsView.h"
 #import "CLUTimeSlider.h"
 #import "CLUTimeDistributionController.h"
+#import "NSColor+CLUStyleAdditions.h"
 
 static void *AVSPPlayerItemStatusContext = &AVSPPlayerItemStatusContext;
 static void *AVSPPlayerRateContext = &AVSPPlayerRateContext;
@@ -52,7 +53,7 @@ static void *AVSPPlayerLayerReadyForDisplay = &AVSPPlayerLayerReadyForDisplay;
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.view setWantsLayer:YES];
-    [self.view.layer setBackgroundColor:[NSColor colorWithRed:56/255.0 green:56/255.0 blue:56/255.0 alpha:1].CGColor]; // TODO: Move colours to separate class
+    [self.view.layer setBackgroundColor:[[NSColor clu_backgroundDark] CGColor]];
     
     CLUDocument *document = [self currentDocument];
     if (!document) {

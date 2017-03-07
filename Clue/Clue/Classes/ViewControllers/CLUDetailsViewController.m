@@ -13,6 +13,7 @@
 #import "CLUViewStructureViewController.h"
 #import "CLUNetworkViewController.h"
 #import "CLUUserInteractionsViewController.h"
+#import "NSColor+CLUStyleAdditions.h"
 
 @interface CLUDetailsViewController () <TabsControlDataSource, TabsControlDelegate>
 
@@ -61,11 +62,11 @@
 - (void)setupSeparators {
     NSView *verticalSeparator = [[NSView alloc] initWithFrame:NSMakeRect(0, 0, 1, self.view.frame.size.height)];
     [verticalSeparator setWantsLayer:YES];
-    verticalSeparator.layer.backgroundColor = [[NSColor colorWithRed:24/255.0 green:24/255.0 blue:24/255.0 alpha:1] CGColor];
+    verticalSeparator.layer.backgroundColor = [[NSColor clu_borderDark] CGColor];
     [self.view addSubview:verticalSeparator];
     NSView *horizontalSeparator = [[NSView alloc] initWithFrame:NSMakeRect(0, 0, self.view.frame.size.width, 1)];
     [horizontalSeparator setWantsLayer:YES];
-    horizontalSeparator.layer.backgroundColor = [[NSColor colorWithRed:24/255.0 green:24/255.0 blue:24/255.0 alpha:1] CGColor];
+    horizontalSeparator.layer.backgroundColor = [[NSColor clu_borderDark] CGColor];
     [self.view addSubview:horizontalSeparator];
 }
 

@@ -9,6 +9,7 @@
 #import "CLUVideoControlsView.h"
 #import "CLUTimeSlider.h"
 #import "CLUTextLabel.h"
+#import "NSColor+CLUStyleAdditions.h"
 
 @interface CLUVideoControlsView()
 @property (nonatomic) NSButton *playButton;
@@ -52,7 +53,7 @@
     NSInteger height = 8;
     _timeSlider = [[CLUTimeSlider alloc] initWithFrame:NSMakeRect(0, rootSize.height - height, rootSize.width, height)];
     [_timeSlider setBackgroundColor:[NSColor clearColor]];
-    [_timeSlider setSelectedBackgroundColor:[NSColor colorWithRed:251/255.0 green:105/255.0 blue:97/255.0 alpha:1]]; // TODO: move colors to separate class
+    [_timeSlider setSelectedBackgroundColor:[NSColor clu_accentRed]];
     [self addSubview:_timeSlider];
 }
 
@@ -60,7 +61,7 @@
     CGFloat x = _playButton.frame.origin.x + _playButton.frame.size.width + 15;
     CGFloat y = _playButton.frame.origin.y;
     _timeLabel = [[CLUTextLabel alloc] initWithFrame:NSMakeRect(x, y, 0, 0)];
-    [_timeLabel setTextColor:[NSColor whiteColor]];
+    [_timeLabel setTextColor:[NSColor clu_textLight]];
     _timeLabel.stringValue = @"00:00 / 00:00 "; // TODO: fix sizing of time label
     [_timeLabel sizeToFit];
     [self addSubview:_timeLabel];

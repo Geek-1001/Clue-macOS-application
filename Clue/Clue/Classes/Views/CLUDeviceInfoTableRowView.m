@@ -8,6 +8,7 @@
 
 #import "CLUDeviceInfoTableRowView.h"
 #import "CLUTextLabel.h"
+#import "NSColor+CLUStyleAdditions.h"
 
 #define kDefaultSideOffset 20
 
@@ -34,7 +35,7 @@
     if (_isAlternateRow) {
         [[NSColor colorWithWhite:0.2 alpha:1] set];
     } else {
-        [[NSColor colorWithRed:63/255.0 green:63/255.0 blue:63/255.0 alpha:1] set];
+        [[NSColor clu_backgroundLight] set];
     }
     NSRectFill(dirtyRect);
 }

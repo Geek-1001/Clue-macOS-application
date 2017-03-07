@@ -8,6 +8,7 @@
 
 #import "CLUTableRowView.h"
 #import "CLUTextLabel.h"
+#import "NSColor+CLUStyleAdditions.h"
 
 #define kDefaultSideOffset 32
 
@@ -33,7 +34,7 @@
 - (void)setupTextLabel {
     if (!_textLabel) {
         _textLabel = [[CLUTextLabel alloc] initWithFrame:CGRectZero];
-        _textLabel.textColor = [NSColor whiteColor];
+        _textLabel.textColor = [NSColor clu_textLight];
         _textLabel.font = [NSFont systemFontOfSize:13];
         _textLabel.stringValue = @"Default value";
         [_textLabel sizeToFit];

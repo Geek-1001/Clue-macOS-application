@@ -11,6 +11,7 @@
 #import "CLUTimelineSlider.h"
 #import "CLUTimeDistributionController.h"
 #import "CLUTimeDistributionDelegate.h"
+#import "NSColor+CLUStyleAdditions.h"
 
 @interface CLUTimelineViewController () <CLUTimeDistributionDelegate>
 
@@ -33,10 +34,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.view setWantsLayer:YES];
-    [self.view.layer setBackgroundColor:[[NSColor colorWithRed:56/255.0
-                                                         green:56/255.0
-                                                          blue:56/255.0
-                                                         alpha:1] CGColor]];
+    [self.view.layer setBackgroundColor:[[NSColor clu_backgroundDark] CGColor]];
     [_timelineSlider setEnabled:NO]; // Prevent user from interactions with slider
 }
 

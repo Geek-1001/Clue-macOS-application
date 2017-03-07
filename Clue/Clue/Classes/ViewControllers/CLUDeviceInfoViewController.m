@@ -9,6 +9,7 @@
 #import "CLUDeviceInfoViewController.h"
 #import "CLUDeviceInfo.h"
 #import "CLUDeviceInfoTableRowView.h"
+#import "NSColor+CLUStyleAdditions.h"
 
 #define kDefaultTableRowHeight 36
 
@@ -41,10 +42,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];    
     [self.view setWantsLayer:YES];
-    [self.view.layer setBackgroundColor:[[NSColor colorWithRed:63/255.0
-                                                        green:63/255.0
-                                                         blue:63/255.0
-                                                        alpha:1] CGColor]];
+    [self.view.layer setBackgroundColor:[[NSColor clu_backgroundLight] CGColor]];
     CLUDocument *document = [self currentDocument];
     if (!document) {
         return;
@@ -56,7 +54,7 @@
 #pragma mark - View Configuration
 
 - (void)configureTableView {
-    [_scrollView setBackgroundColor:[NSColor colorWithRed:63/255.0 green:63/255.0 blue:63/255.0 alpha:1]];
+    [_scrollView setBackgroundColor:[NSColor clu_backgroundLight]];
     [_tableView setBackgroundColor:_scrollView.backgroundColor];
     _tableView.allowsEmptySelection = YES;    
     _tableView.selectionHighlightStyle = NSTableViewSelectionHighlightStyleNone;
