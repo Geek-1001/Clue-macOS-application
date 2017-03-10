@@ -22,10 +22,9 @@
     return self;
 }
 
-- (NSString *)windowNibName {
-    // Override returning the nib file name of the document
-    // If you need to use a subclass of NSWindowController or if your document supports multiple NSWindowControllers, you should remove this method and override -makeWindowControllers instead.
-    return @"Document";
+- (void)makeWindowControllers {
+    NSWindowController *windowController = [[NSWindowController alloc] initWithWindowNibName:@"Document"];
+    [self addWindowController:windowController];
 }
 
 - (BOOL)readFromURL:(NSURL *)url ofType:(NSString *)typeName error:(NSError * _Nullable __autoreleasing *)outError {
@@ -60,6 +59,8 @@
     // TODO: Refactor. Come up with something more clever for this parsing
     BOOL infoParseResult = [self parseFileWrappersDictionary:infoFileWrappers withURL:infoURL];
     BOOL moduleParseResult = [self parseFileWrappersDictionary:modulesFileWrappers withURL:moduleURL];
+    
+    _documentId = [[NSUUID UUID] UUIDString]; // Setup unique identifier for document
     
     return infoParseResult && moduleParseResult;
 }

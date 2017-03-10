@@ -15,6 +15,8 @@
 
 @interface CLUDocument : NSDocument
 
+@property (nonatomic, readonly) NSString *documentId;
+
 @property (nonatomic, readonly) CLUVideo *video;
 @property (nonatomic, readonly) CLUDeviceInfo *deviceInfo;
 @property (nonatomic, readonly) CLUViewStructure *viewStructure;
