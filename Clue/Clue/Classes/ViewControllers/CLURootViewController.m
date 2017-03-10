@@ -16,11 +16,12 @@
 
 - (CLUDocument * _Nullable)currentDocument {
     NSArray<CLUDocument *> *documents = [[NSDocumentController sharedDocumentController] documents];
-    if (documents.count == 0) {
-        return nil;
+    for (CLUDocument *document in documents) {
+        if ([document.windowControllers firstObject] == self.view.window.windowController) {
+            return document;
+        }
     }
-    CLUDocument *document = [documents firstObject];
-    return document;
+    return nil;
 }
 
 @end
