@@ -11,12 +11,16 @@
 
 @interface CLUTimeDistributionController : NSObject
 
-@property (nonatomic) double duration;
-@property (nonatomic) double currentTime;
-@property (nonatomic) BOOL timePlaybackStart;
+@property (nonatomic, readonly) double duration;
+@property (nonatomic, readonly) double currentTime;
+@property (nonatomic, readonly) BOOL timePlaybackStart;
 
 + (instancetype)sharedController;
-- (void)registerHandler:(id<CLUTimeDistributionDelegate>)handler;
+- (void)registerHandler:(id<CLUTimeDistributionDelegate>)handler withDocumentID:(NSString *)documentId;
 - (void)unregisterHandler:(id<CLUTimeDistributionDelegate>)handler;
+
+- (void)setCurrentTime:(double)currentTime forDocumentId:(NSString *)documentId;
+- (void)setDuration:(double)duration forDocumentId:(NSString *)documentId;
+- (void)setTimePlaybackStart:(BOOL)timePlaybackStart forDocumentId:(NSString *)documentId;
 
 @end
