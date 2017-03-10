@@ -17,6 +17,7 @@
 
 @property (weak) IBOutlet CLUTextLabel *timeLabel;
 @property (weak) IBOutlet CLUTimelineSlider *timelineSlider;
+@property (nonatomic) CLUDocument *document;
 
 @end
 
@@ -27,7 +28,6 @@
     if (!self) {
         return nil;
     }
-    [[CLUTimeDistributionController sharedController] registerHandler:self];
     return self;
 }
 
@@ -36,6 +36,9 @@
     [self.view setWantsLayer:YES];
     [self.view.layer setBackgroundColor:[[NSColor clu_backgroundDark] CGColor]];
     [_timelineSlider setEnabled:NO]; // Prevent user from interactions with slider
+    
+    _document = [self currentDocument];
+    [[CLUTimeDistributionController sharedController] registerHandler:self withDocumentID:_document.documentId];
 }
 
 #pragma mark - Time Distribution Delegate
@@ -48,18 +51,14 @@
 - (void)timeWillStartWithDuration:(double)duration {
     [_timelineSlider setDuration:duration];
     
-    CLUDocument *document = [self currentDocument];
-    if (!document) {
-        return;
-    }
     [_timelineSlider addEventsOfType:CLUTimelineNetworkEvent
-                       forTimestamps:document.network.rootDataDictionary.allKeys
+                       forTimestamps:_document.network.rootDataDictionary.allKeys
                            withColor:CLUTimelineNetworkColor];
     [_timelineSlider addEventsOfType:CLUTimelineUserInteractionEvent
-                       forTimestamps:document.userInteractions.rootDataDictionary.allKeys
+                       forTimestamps:_document.userInteractions.rootDataDictionary.allKeys
                            withColor:CLUTimelineUserInteractionColor];
     [_timelineSlider addEventsOfType:CLUTimelineViewStructureEvent
-                       forTimestamps:document.viewStructure.rootDataDictionary.allKeys
+                       forTimestamps:_document.viewStructure.rootDataDictionary.allKeys
                            withColor:CLUTimelineViewStructureColor];
 }
 
