@@ -28,7 +28,6 @@
     if (!self) {
         return nil;
     }
-    [[CLUTimeDistributionController sharedController] registerHandler:self];
     return self;
 }
 
@@ -36,6 +35,9 @@
     [super viewDidLoad];
     [self.view setWantsLayer:YES];
     [self.view.layer setBackgroundColor:[[NSColor clu_backgroundLight] CGColor]];
+    
+    CLUDocument *currentDocument = [self currentDocument];
+    [[CLUTimeDistributionController sharedController] registerHandler:self withDocumentID:currentDocument.documentId];
 }
 
 - (void)keyDown:(NSEvent *)event {
