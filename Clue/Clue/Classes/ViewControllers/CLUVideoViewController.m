@@ -20,6 +20,7 @@ static void *AVSPPlayerLayerReadyForDisplay = &AVSPPlayerLayerReadyForDisplay;
 
 @interface CLUVideoViewController ()
 
+@property (nonatomic) CLUDocument *document;
 @property (nonatomic) CLUVideo *video;
 
 @property (weak) IBOutlet NSView *playerView;
@@ -55,12 +56,12 @@ static void *AVSPPlayerLayerReadyForDisplay = &AVSPPlayerLayerReadyForDisplay;
     [self.view setWantsLayer:YES];
     [self.view.layer setBackgroundColor:[[NSColor clu_backgroundDark] CGColor]];
     
-    CLUDocument *document = [self currentDocument];
-    if (!document) {
+    _document = [self currentDocument];
+    if (!_document) {
         return;
     }
     [self showLoading];
-    _video = document.video;
+    _video = _document.video;
     __weak CLUVideoViewController *weakSelf = self;
     [_video configureVideoWithCompletion:^(CLUVideoStatus status) {
         dispatch_sync(dispatch_get_main_queue(), ^{
@@ -171,7 +172,7 @@ static void *AVSPPlayerLayerReadyForDisplay = &AVSPPlayerLayerReadyForDisplay;
     [self setTimeObserverToken:[_player addPeriodicTimeObserverForInterval:CMTimeMake(1, 10) queue:dispatch_get_main_queue() usingBlock:^(CMTime time) {
         NSTimeInterval timeInSeconds = CMTimeGetSeconds(time);
         [weakSelf.videoControls setCurrentTime:timeInSeconds];
-        [[CLUTimeDistributionController sharedController] setCurrentTime:timeInSeconds];
+        [[CLUTimeDistributionController sharedController] setCurrentTime:timeInSeconds forDocumentId:weakSelf.document.documentId];
     }]];
 }
 
@@ -186,7 +187,7 @@ static void *AVSPPlayerLayerReadyForDisplay = &AVSPPlayerLayerReadyForDisplay;
                 break;
             case AVPlayerItemStatusReadyToPlay:
                 [_videoControls setVideoDuration:[self videoDuration]];
-                [[CLUTimeDistributionController sharedController] setDuration:[self videoDuration]];
+                [[CLUTimeDistributionController sharedController] setDuration:[self videoDuration] forDocumentId:_document.documentId];
                 enable = YES;
                 break;
             case AVPlayerItemStatusFailed:
@@ -202,7 +203,7 @@ static void *AVSPPlayerLayerReadyForDisplay = &AVSPPlayerLayerReadyForDisplay;
                 [_videoControls forceTogglePlayButtonState];
                 
                 CLUTimeDistributionController *timeDistributorController = [CLUTimeDistributionController sharedController];
-                [timeDistributorController setTimePlaybackStart:!timeDistributorController.timePlaybackStart];
+                [timeDistributorController setTimePlaybackStart:!timeDistributorController.timePlaybackStart forDocumentId:_document.documentId];
             }
         }
     } else if (context == AVSPPlayerLayerReadyForDisplay) {
@@ -220,12 +221,12 @@ static void *AVSPPlayerLayerReadyForDisplay = &AVSPPlayerLayerReadyForDisplay;
 
 - (void)play {
     [_player play];
-    [[CLUTimeDistributionController sharedController] setTimePlaybackStart:YES];
+    [[CLUTimeDistributionController sharedController] setTimePlaybackStart:YES forDocumentId:_document.documentId];
 }
 
 - (void)pause {
     [_player pause];
-    [[CLUTimeDistributionController sharedController] setTimePlaybackStart:NO];
+    [[CLUTimeDistributionController sharedController] setTimePlaybackStart:NO forDocumentId:_document.documentId];
 }
 
 - (double)videoDuration {
