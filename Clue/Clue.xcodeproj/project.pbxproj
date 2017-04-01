@@ -40,26 +40,27 @@
 		E28E17C51DE106F5000CA903 /* CLUVideo.m in Sources */ = {isa = PBXBuildFile; fileRef = E28E17C41DE106F5000CA903 /* CLUVideo.m */; };
 		E29154541E32261900619F5D /* CLUDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E29154531E32261900619F5D /* CLUDetailsViewController.m */; };
 		E2A9E9EB1E6F5CF6005FCD29 /* NSColor+CLUStyleAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = E2A9E9EA1E6F5CF6005FCD29 /* NSColor+CLUStyleAdditions.m */; };
-		E2BF90E21E32B1EA00B8F18D /* KPCTabsControl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2BF90E11E32B1EA00B8F18D /* KPCTabsControl.framework */; };
-		E2BF90E31E32B1F500B8F18D /* KPCTabsControl.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = E2BF90E11E32B1EA00B8F18D /* KPCTabsControl.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E2BF90E61E32B36000B8F18D /* CLUTabBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = E2BF90E51E32B36000B8F18D /* CLUTabBarItem.m */; };
 		E2CB3B371DEB88F400417F26 /* CLUVideoControlsView.m in Sources */ = {isa = PBXBuildFile; fileRef = E2CB3B361DEB88F400417F26 /* CLUVideoControlsView.m */; };
 		E2CB3B3A1DEB8A2000417F26 /* CLUTimeSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = E2CB3B391DEB8A2000417F26 /* CLUTimeSlider.m */; };
 		E2CB3B3E1DEB8A8300417F26 /* CLUTimeSliderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E2CB3B3D1DEB8A8300417F26 /* CLUTimeSliderCell.m */; };
 		E2CB3B411DEB8E2C00417F26 /* CLUTextLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = E2CB3B401DEB8E2C00417F26 /* CLUTextLabel.m */; };
+		E2D9A4521E8F1E9F0099B0AA /* KPCTabsControl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2D9A4511E8F1E9F0099B0AA /* KPCTabsControl.framework */; };
+		E2D9A4531E8F1EA30099B0AA /* KPCTabsControl.framework in Copy Files */ = {isa = PBXBuildFile; fileRef = E2D9A4511E8F1E9F0099B0AA /* KPCTabsControl.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E2FA6DC01DF336A300EBDBBA /* CLURootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2FA6DBF1DF336A300EBDBBA /* CLURootViewController.m */; };
 		E2FAFF0A1E34D37700C43677 /* CLUDeviceInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2FAFF091E34D37700C43677 /* CLUDeviceInfoViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		E29154501E32224800619F5D /* CopyFiles */ = {
+		E29154501E32224800619F5D /* Copy Files */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				E2BF90E31E32B1F500B8F18D /* KPCTabsControl.framework in CopyFiles */,
+				E2D9A4531E8F1EA30099B0AA /* KPCTabsControl.framework in Copy Files */,
 			);
+			name = "Copy Files";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -132,7 +133,6 @@
 		E29154531E32261900619F5D /* CLUDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLUDetailsViewController.m; sourceTree = "<group>"; };
 		E2A9E9E91E6F5CF6005FCD29 /* NSColor+CLUStyleAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSColor+CLUStyleAdditions.h"; sourceTree = "<group>"; };
 		E2A9E9EA1E6F5CF6005FCD29 /* NSColor+CLUStyleAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSColor+CLUStyleAdditions.m"; sourceTree = "<group>"; };
-		E2BF90E11E32B1EA00B8F18D /* KPCTabsControl.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = KPCTabsControl.framework; sourceTree = "<group>"; };
 		E2BF90E41E32B36000B8F18D /* CLUTabBarItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLUTabBarItem.h; sourceTree = "<group>"; };
 		E2BF90E51E32B36000B8F18D /* CLUTabBarItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLUTabBarItem.m; sourceTree = "<group>"; };
 		E2CB3B351DEB88F400417F26 /* CLUVideoControlsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLUVideoControlsView.h; sourceTree = "<group>"; };
@@ -143,6 +143,7 @@
 		E2CB3B3D1DEB8A8300417F26 /* CLUTimeSliderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLUTimeSliderCell.m; sourceTree = "<group>"; };
 		E2CB3B3F1DEB8E2C00417F26 /* CLUTextLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLUTextLabel.h; sourceTree = "<group>"; };
 		E2CB3B401DEB8E2C00417F26 /* CLUTextLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLUTextLabel.m; sourceTree = "<group>"; };
+		E2D9A4511E8F1E9F0099B0AA /* KPCTabsControl.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = KPCTabsControl.framework; sourceTree = "<group>"; };
 		E2FA6DBE1DF336A300EBDBBA /* CLURootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLURootViewController.h; sourceTree = "<group>"; };
 		E2FA6DBF1DF336A300EBDBBA /* CLURootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLURootViewController.m; sourceTree = "<group>"; };
 		E2FAFF081E34D37600C43677 /* CLUDeviceInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLUDeviceInfoViewController.h; sourceTree = "<group>"; };
@@ -154,7 +155,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E2BF90E21E32B1EA00B8F18D /* KPCTabsControl.framework in Frameworks */,
+				E2D9A4521E8F1E9F0099B0AA /* KPCTabsControl.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,7 +310,7 @@
 		E291544D1E3221C900619F5D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				E2BF90E11E32B1EA00B8F18D /* KPCTabsControl.framework */,
+				E2D9A4511E8F1E9F0099B0AA /* KPCTabsControl.framework */,
 			);
 			path = Frameworks;
 			sourceTree = "<group>";
@@ -355,7 +356,7 @@
 				E20C2CB01DCE1EE600033248 /* Sources */,
 				E20C2CB11DCE1EE600033248 /* Frameworks */,
 				E20C2CB21DCE1EE600033248 /* Resources */,
-				E29154501E32224800619F5D /* CopyFiles */,
+				E29154501E32224800619F5D /* Copy Files */,
 			);
 			buildRules = (
 			);
