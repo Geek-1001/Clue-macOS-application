@@ -21,22 +21,26 @@
     }
     NSData *jsonData = [jsonString dataUsingEncoding:NSUTF8StringEncoding];
     NSDictionary *jsonDictionary = [NSJSONSerialization JSONObjectWithData:jsonData options:kNilOptions error:&error];
+    if (error) {
+        // TODO: add json error handling
+        return nil;
+    }
     self = [self initWithJSONRepresentation:jsonDictionary];
     return self;
 }
 
 - (instancetype)initWithJSONRepresentation:(NSDictionary *)json {
     self = [super init];
-    if (!self) {
+    if (!self || !json) {
         return nil;
     }
     _batteryState = [[json objectForKey:@"batteryState"] integerValue];
-    _systemName = [json objectForKey:@"systemName"];
-    _model = [json objectForKey:@"model"];
-    _systemVersion = [json objectForKey:@"systemVersion"];
+    _systemName = [json objectForKey:@"systemName"] ?: @"Undefined";
+    _model = [json objectForKey:@"model"] ?: @"Undefined";
+    _systemVersion = [json objectForKey:@"systemVersion"] ?: @"Undefined";
     _batteryLevel = [[json objectForKey:@"batteryLevel"] floatValue];
-    _name = [json objectForKey:@"name"];
-    _identifierForVendor = [json objectForKey:@"identifierForVendor"];
+    _name = [json objectForKey:@"name"] ?: @"Undefined";
+    _identifierForVendor = [json objectForKey:@"identifierForVendor"] ?: @"Undefined";
     return self;
 }
 
