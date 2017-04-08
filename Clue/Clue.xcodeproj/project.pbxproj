@@ -51,6 +51,16 @@
 		E2FAFF0A1E34D37700C43677 /* CLUDeviceInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2FAFF091E34D37700C43677 /* CLUDeviceInfoViewController.m */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		E275692B1E99223D0059E544 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E20C2CAC1DCE1EE600033248 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E20C2CB31DCE1EE600033248;
+			remoteInfo = Clue;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXCopyFilesBuildPhase section */
 		E29154501E32224800619F5D /* Copy Files */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -121,6 +131,8 @@
 		E26E5B681E395D3D00AB49B1 /* CLUTableRowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLUTableRowView.h; sourceTree = "<group>"; };
 		E26E5B691E395D3D00AB49B1 /* CLUTableRowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLUTableRowView.m; sourceTree = "<group>"; };
 		E27195FC1E4296BC007A4A55 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E27569261E99223D0059E544 /* ClueTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClueTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E275692A1E99223D0059E544 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E27A4FE21E34DBF600382FF9 /* CLUDeviceInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLUDeviceInfo.h; sourceTree = "<group>"; };
 		E27A4FE31E34DBF600382FF9 /* CLUDeviceInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLUDeviceInfo.m; sourceTree = "<group>"; };
 		E27A50031E34DD5500382FF9 /* CLUJSONDeserializable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLUJSONDeserializable.h; sourceTree = "<group>"; };
@@ -159,6 +171,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E27569231E99223D0059E544 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -191,6 +210,7 @@
 			isa = PBXGroup;
 			children = (
 				E20C2CB61DCE1EE600033248 /* Clue */,
+				E27569271E99223D0059E544 /* ClueTests */,
 				E20C2CB51DCE1EE600033248 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -199,6 +219,7 @@
 			isa = PBXGroup;
 			children = (
 				E20C2CB41DCE1EE600033248 /* Clue.app */,
+				E27569261E99223D0059E544 /* ClueTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -241,6 +262,22 @@
 				E23B128C1E3E27AA00EE6CDF /* CLUTimeDistributionController.m */,
 			);
 			path = AuxiliaryControllers;
+			sourceTree = "<group>";
+		};
+		E27569271E99223D0059E544 /* ClueTests */ = {
+			isa = PBXGroup;
+			children = (
+				E27569301E9923D30059E544 /* Models */,
+				E275692A1E99223D0059E544 /* Info.plist */,
+			);
+			path = ClueTests;
+			sourceTree = "<group>";
+		};
+		E27569301E9923D30059E544 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		E2791DD01DCE20670010A549 /* Classes */ = {
@@ -367,6 +404,24 @@
 			productReference = E20C2CB41DCE1EE600033248 /* Clue.app */;
 			productType = "com.apple.product-type.application";
 		};
+		E27569251E99223D0059E544 /* ClueTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E275692F1E99223D0059E544 /* Build configuration list for PBXNativeTarget "ClueTests" */;
+			buildPhases = (
+				E27569221E99223D0059E544 /* Sources */,
+				E27569231E99223D0059E544 /* Frameworks */,
+				E27569241E99223D0059E544 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E275692C1E99223D0059E544 /* PBXTargetDependency */,
+			);
+			name = ClueTests;
+			productName = ClueTests;
+			productReference = E27569261E99223D0059E544 /* ClueTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -379,6 +434,11 @@
 					E20C2CB31DCE1EE600033248 = {
 						CreatedOnToolsVersion = 8.1;
 						ProvisioningStyle = Automatic;
+					};
+					E27569251E99223D0059E544 = {
+						CreatedOnToolsVersion = 8.3;
+						ProvisioningStyle = Automatic;
+						TestTargetID = E20C2CB31DCE1EE600033248;
 					};
 				};
 			};
@@ -396,6 +456,7 @@
 			projectRoot = "";
 			targets = (
 				E20C2CB31DCE1EE600033248 /* Clue */,
+				E27569251E99223D0059E544 /* ClueTests */,
 			);
 		};
 /* End PBXProject section */
@@ -409,6 +470,13 @@
 				E20C2CC21DCE1EE600033248 /* Document.xib in Resources */,
 				E27195FD1E4296BC007A4A55 /* Assets.xcassets in Resources */,
 				E20C2CC71DCE1EE600033248 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E27569241E99223D0059E544 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -458,7 +526,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E27569221E99223D0059E544 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E275692C1E99223D0059E544 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E20C2CB31DCE1EE600033248 /* Clue */;
+			targetProxy = E275692B1E99223D0059E544 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		E20C2CC01DCE1EE600033248 /* Document.xib */ = {
@@ -601,6 +684,36 @@
 			};
 			name = Release;
 		};
+		E275692D1E99223D0059E544 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = ClueTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ahmed.app.ClueTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Clue.app/Contents/MacOS/Clue";
+			};
+			name = Debug;
+		};
+		E275692E1E99223D0059E544 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = ClueTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ahmed.app.ClueTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Clue.app/Contents/MacOS/Clue";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -621,6 +734,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		E275692F1E99223D0059E544 /* Build configuration list for PBXNativeTarget "ClueTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E275692D1E99223D0059E544 /* Debug */,
+				E275692E1E99223D0059E544 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
