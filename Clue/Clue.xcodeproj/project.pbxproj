@@ -34,6 +34,7 @@
 		E26D6FD61E5665E600DE07BE /* CLUTimelineSliderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E26D6FD51E5665E600DE07BE /* CLUTimelineSliderCell.m */; };
 		E26E5B6A1E395D3D00AB49B1 /* CLUTableRowView.m in Sources */ = {isa = PBXBuildFile; fileRef = E26E5B691E395D3D00AB49B1 /* CLUTableRowView.m */; };
 		E27195FD1E4296BC007A4A55 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E27195FC1E4296BC007A4A55 /* Assets.xcassets */; };
+		E27569321E9923FD0059E544 /* CLUDeviceInfoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E27569311E9923FD0059E544 /* CLUDeviceInfoTests.m */; };
 		E27A4FE41E34DBF600382FF9 /* CLUDeviceInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = E27A4FE31E34DBF600382FF9 /* CLUDeviceInfo.m */; };
 		E27A50091E354C3700382FF9 /* CLUDeviceInfoTableRowView.m in Sources */ = {isa = PBXBuildFile; fileRef = E27A50081E354C3700382FF9 /* CLUDeviceInfoTableRowView.m */; };
 		E28E17C51DE106F5000CA903 /* CLUVideo.m in Sources */ = {isa = PBXBuildFile; fileRef = E28E17C41DE106F5000CA903 /* CLUVideo.m */; };
@@ -133,6 +134,7 @@
 		E27195FC1E4296BC007A4A55 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E27569261E99223D0059E544 /* ClueTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClueTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E275692A1E99223D0059E544 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E27569311E9923FD0059E544 /* CLUDeviceInfoTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLUDeviceInfoTests.m; sourceTree = "<group>"; };
 		E27A4FE21E34DBF600382FF9 /* CLUDeviceInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLUDeviceInfo.h; sourceTree = "<group>"; };
 		E27A4FE31E34DBF600382FF9 /* CLUDeviceInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLUDeviceInfo.m; sourceTree = "<group>"; };
 		E27A50031E34DD5500382FF9 /* CLUJSONDeserializable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLUJSONDeserializable.h; sourceTree = "<group>"; };
@@ -276,6 +278,7 @@
 		E27569301E9923D30059E544 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				E27569311E9923FD0059E544 /* CLUDeviceInfoTests.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -530,6 +533,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E27569321E9923FD0059E544 /* CLUDeviceInfoTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
