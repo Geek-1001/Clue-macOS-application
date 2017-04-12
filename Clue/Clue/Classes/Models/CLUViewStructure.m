@@ -18,7 +18,11 @@
         return nil;
     }
     [self JSONTimeRelatedDataFromDataItemsArray:self.rootDataItems toRootDataDictionary:self.rootDataDictionary];
-    // init root view item with default value for default timestamp
+    // If there is no data in main dictionary - fail initialization, since view structure can't be empty
+    if (self.rootDataDictionary.count == 0) {
+        return nil;
+    }
+    // init root view item with default value for default timestamp (at start self.currentTiestamp = 0)
     _rootViewItem = [self.rootDataDictionary objectForKey:[NSNumber numberWithInteger:self.currentTiestamp]];
     return self;
 }
@@ -29,10 +33,17 @@
         return;
     }
     for (NSDictionary *viewStateDictionary in dataItems) {
-        NSInteger timestamp = [[viewStateDictionary objectForKey:TIMESTAMP_KEY] integerValue];
-        CLUUIView *view = [[CLUUIView alloc] initWithJSONRepresentation:[viewStateDictionary objectForKey:VIEW_KEY]];
-        NSNumber *timestampKey = [NSNumber numberWithFloat:timestamp];
-        [dataDictionary setObject:view forKey:timestampKey];
+        id timestampObject = [viewStateDictionary objectForKey:TIMESTAMP_KEY];
+        NSDictionary *viewJSONRepresentationDictionary = [viewStateDictionary objectForKey:VIEW_KEY];
+        // Continue to the next json object from file if there is no timestamp and view data in current one
+        if (!timestampObject || !viewJSONRepresentationDictionary) {
+            continue;
+        }
+        NSNumber *timestampKey = [NSNumber numberWithFloat:[timestampObject integerValue]];
+        CLUUIView *view = [[CLUUIView alloc] initWithJSONRepresentation:viewJSONRepresentationDictionary];
+        if (view && timestampKey) {
+            [dataDictionary setObject:view forKey:timestampKey];
+        }
     }
 }
 
