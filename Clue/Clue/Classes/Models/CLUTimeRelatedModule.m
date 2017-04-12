@@ -16,12 +16,15 @@
 
 - (instancetype)initWithURL:(NSURL *)url {
     self = [super init];
-    if (!self) {
+    if (!self || !url) {
+        return nil;
+    }
+    _rootDataItems = [self processJsonFileWithURL:url];
+    if (!_rootDataItems) {
         return nil;
     }
     _currentTiestamp = 0;
     _rootDataDictionary = [NSMutableDictionary new];
-    _rootDataItems = [self processJsonFileWithURL:url];
     return self;
 }
 
@@ -38,8 +41,15 @@
     NSMutableArray<NSDictionary *> *dataItemsArray = [NSMutableArray new];
     
     for (NSString *separatedJsonStringItem in separatedJsonString) {
+        // Skip empty strings from json file
+        if (separatedJsonStringItem.length == 0) {
+            continue;
+        }
         NSDictionary *jsonItem = [self convertJsonString:separatedJsonStringItem];
-        if (!jsonItem) { continue; }
+        if (!jsonItem) {
+            // There should be no invalid json items at all. If single json item is invalid - fail initialization
+            return nil;
+        }
         [dataItemsArray addObject:jsonItem];
     }
     
@@ -47,7 +57,7 @@
 }
 
 - (NSDictionary *)convertJsonString:(NSString *)jsonString {
-    if (jsonString == nil || jsonString.length == 0) {
+    if (jsonString == nil) {
         return nil;
     }
     NSError *error;
