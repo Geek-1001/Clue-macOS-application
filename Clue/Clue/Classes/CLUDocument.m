@@ -53,37 +53,45 @@
     NSURL *infoURL = [url URLByAppendingPathComponent:[infoFileWrapper filename] isDirectory:YES];
     NSURL *moduleURL = [url URLByAppendingPathComponent:[modulesFileWrapper filename] isDirectory:YES];
     
-    NSDictionary <NSString *, NSFileWrapper *> *infoFileWrappers = [infoFileWrapper fileWrappers];
-    NSDictionary <NSString *, NSFileWrapper *> *modulesFileWrappers = [modulesFileWrapper fileWrappers];
+    NSMutableDictionary *modulesFileWrappersDictionary = [[NSMutableDictionary alloc]
+                                                          initWithDictionary:[infoFileWrapper fileWrappers]];
+    [modulesFileWrappersDictionary addEntriesFromDictionary:[modulesFileWrapper fileWrappers]];
     
-    // TODO: Refactor. Come up with something more clever for this parsing
-    BOOL infoParseResult = [self parseFileWrappersDictionary:infoFileWrappers withURL:infoURL];
-    BOOL moduleParseResult = [self parseFileWrappersDictionary:modulesFileWrappers withURL:moduleURL];
-    
-    _documentId = [[NSUUID UUID] UUIDString]; // Setup unique identifier for document
-    
-    return infoParseResult && moduleParseResult;
+    BOOL modulesParseResult = [self parseFileWrappersDictionary:modulesFileWrappersDictionary
+                                    withRecordableModuleRootURL:moduleURL
+                                          withInfoModuleRootURL:infoURL];
+    // Setup unique identifier for document
+    _documentId = [[NSUUID UUID] UUIDString];
+    return modulesParseResult;
 }
 
-- (BOOL)parseFileWrappersDictionary:(NSDictionary <NSString *, NSFileWrapper *> *)fileWrappers withURL:(NSURL *)url {
+- (BOOL)parseFileWrappersDictionary:(NSDictionary <NSString *, NSFileWrapper *> *)fileWrappers
+        withRecordableModuleRootURL:(NSURL *)recordableModuleRootURL
+              withInfoModuleRootURL:(NSURL *)infoModuleRootURL {
     for (NSString *key in fileWrappers) {
         NSFileWrapper *file = [fileWrappers objectForKey:key];
         if (![file isRegularFile]) {
             return NO;
         }
         
-        NSURL *fileURL = [url URLByAppendingPathComponent:[file filename]];
+        NSURL *recordableModuleFileURL = [recordableModuleRootURL URLByAppendingPathComponent:[file filename]];
+        NSURL *infoModuleFileURL = [infoModuleRootURL URLByAppendingPathComponent:[file filename]];
+        
         if ([[file filename] isEqualToString:@"module_video.mp4"]) {
-            _video = [[CLUVideo alloc] initWithURL:fileURL];
+            _video = [[CLUVideo alloc] initWithURL:recordableModuleFileURL];
         } else if ([[file filename] isEqualToString:@"info_device.json"]) {
-            _deviceInfo = [[CLUDeviceInfo alloc] initWithURL:fileURL];
+            _deviceInfo = [[CLUDeviceInfo alloc] initWithURL:infoModuleFileURL];
         } else if ([[file filename] isEqualToString:@"module_view.json"]) {
-            _viewStructure = [[CLUViewStructure alloc] initWithURL:fileURL];
+            _viewStructure = [[CLUViewStructure alloc] initWithURL:recordableModuleFileURL];
         } else if ([[file filename] isEqualToString:@"module_network.json"]) {
-            _network = [[CLUNetwork alloc] initWithURL:fileURL];
+            _network = [[CLUNetwork alloc] initWithURL:recordableModuleFileURL];
         } else if ([[file filename] isEqualToString:@"module_interaction.json"]) {
-            _userInteractions = [[CLUUserInteractions alloc] initWithURL:fileURL];
+            _userInteractions = [[CLUUserInteractions alloc] initWithURL:recordableModuleFileURL];
         }
+    }
+    // View should always be present and valid in clue bug report files
+    if (!_viewStructure) {
+        return NO;
     }
     return YES;
 }
