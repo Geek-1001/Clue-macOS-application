@@ -17,8 +17,12 @@
 			</array>
 			<key>CFBundleTypeIconFile</key>
 			<string>clue_document</string>
+            <key>CFBundleTypeOSTypes</key>
+            <array>
+                <string>CLUE</string>
+            </array>
 			<key>CFBundleTypeName</key>
-			<string>com.clue.clu</string>
+			<string>Clue bug report file</string>
 			<key>CFBundleTypeOSTypes</key>
 			<array>
 				<string>????</string>
@@ -53,5 +57,7 @@
 	<string>MainMenu</string>
 	<key>NSPrincipalClass</key>
 	<string>NSApplication</string>
+    <key>CFBundleSignature</key>
+    <string>CLUE</string>
 </dict>
 </plist>
