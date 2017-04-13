@@ -1,10 +1,6 @@
 
 # Clue macOS application
 
-<p align="center">
-    <img src="Images/clue-mac-application-demo.gif" alt="Clue Demo" />
-</p>
-
 <p align="center">    
     <a href="https://travis-ci.org/Geek-1001/Clue-macOS-application/branches">
         <img src="https://img.shields.io/travis/Geek-1001/Clue-macOS-application/master.svg" alt="Travis status" />
@@ -13,6 +9,11 @@
     <a href="https://twitter.com/ahmed_sulajman">
         <img src="https://img.shields.io/badge/contact-%40ahmed__sulajman-orange.svg?style=flat" alt="Twitter: @ahmed__sulajman" />
     </a>
+</p>
+<br>
+
+<p align="center">
+    <img src="Images/clue-mac-application-demo.gif" alt="Clue Demo" />
 </p>
 <br>
 
