@@ -21,6 +21,7 @@
 		E21EB6001E9A47B900BFBA01 /* CLUTimeRelatedModuleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E21EB5FF1E9A47B900BFBA01 /* CLUTimeRelatedModuleTests.m */; };
 		E21EB6031E9A610A00BFBA01 /* view-structure-module-valid.json in Resources */ = {isa = PBXBuildFile; fileRef = E21EB6021E9A610A00BFBA01 /* view-structure-module-valid.json */; };
 		E21EB6051E9A635400BFBA01 /* view-structure-module-invalid.json in Resources */ = {isa = PBXBuildFile; fileRef = E21EB6041E9A635400BFBA01 /* view-structure-module-invalid.json */; };
+		E21EB6071E9A638700BFBA01 /* CLUViewStructureTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E21EB6061E9A638700BFBA01 /* CLUViewStructureTests.m */; };
 		E22538E91E590B9300F4FBB7 /* CLUTimelineEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = E22538E81E590B9300F4FBB7 /* CLUTimelineEvent.m */; };
 		E238630B1E3FE1E40056F34E /* CLUNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = E238630A1E3FE1E40056F34E /* CLUNetwork.m */; };
 		E238630E1E3FE3280056F34E /* CLUNetworkEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = E238630D1E3FE3280056F34E /* CLUNetworkEntity.m */; };
@@ -108,6 +109,7 @@
 		E21EB5FF1E9A47B900BFBA01 /* CLUTimeRelatedModuleTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLUTimeRelatedModuleTests.m; sourceTree = "<group>"; };
 		E21EB6021E9A610A00BFBA01 /* view-structure-module-valid.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "view-structure-module-valid.json"; sourceTree = "<group>"; };
 		E21EB6041E9A635400BFBA01 /* view-structure-module-invalid.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "view-structure-module-invalid.json"; sourceTree = "<group>"; };
+		E21EB6061E9A638700BFBA01 /* CLUViewStructureTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLUViewStructureTests.m; sourceTree = "<group>"; };
 		E22538E71E590B9300F4FBB7 /* CLUTimelineEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLUTimelineEvent.h; sourceTree = "<group>"; };
 		E22538E81E590B9300F4FBB7 /* CLUTimelineEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLUTimelineEvent.m; sourceTree = "<group>"; };
 		E23863091E3FE1E40056F34E /* CLUNetwork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLUNetwork.h; sourceTree = "<group>"; };
@@ -308,6 +310,7 @@
 				E27569311E9923FD0059E544 /* CLUDeviceInfoTests.m */,
 				E21EB5FD1E9A461300BFBA01 /* CLUTabBarItemTests.m */,
 				E21EB5FF1E9A47B900BFBA01 /* CLUTimeRelatedModuleTests.m */,
+				E21EB6061E9A638700BFBA01 /* CLUViewStructureTests.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -568,6 +571,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E27569321E9923FD0059E544 /* CLUDeviceInfoTests.m in Sources */,
+				E21EB6071E9A638700BFBA01 /* CLUViewStructureTests.m in Sources */,
 				E21EB5FE1E9A461300BFBA01 /* CLUTabBarItemTests.m in Sources */,
 				E21EB6001E9A47B900BFBA01 /* CLUTimeRelatedModuleTests.m in Sources */,
 			);
