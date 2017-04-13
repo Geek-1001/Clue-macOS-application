@@ -29,9 +29,17 @@
     [_subviews setArrayType:[NSNumber numberWithInt:CLUOutlineViewDataSubviewsArrayItem]];
     [_properties setArrayType:[NSNumber numberWithInt:CLUOutlineViewDataPropertiesArrayItem]];
     
-    [self propertiesForJSONDictionary:json toArray:_properties];
-    [self subviewsForJSONDictionary:json toArray:_subviews];
     _className = [json objectForKey:CLASS_KEY];
+    [self propertiesForJSONDictionary:json toArray:_properties];
+    
+    if (_properties.count == 0 || !_className) {
+        // Every view should have class name
+        // Every view should have at least one property inside properties array
+        // In other cases - fail initialization
+        return nil;
+    }
+    
+    [self subviewsForJSONDictionary:json toArray:_subviews];
     
     return self;
 }
@@ -42,6 +50,9 @@
     }
     
     NSDictionary *propertiesJSONDictionary = [jsonDictionary objectForKey:PROPERTIES_KEY];
+    if (!propertiesJSONDictionary) {
+        return;
+    }
     NSArray *allPropertiesJSONKeys = [propertiesJSONDictionary allKeys];
     NSArray *allPropertiesJSONValues = [propertiesJSONDictionary allValues];
     
